@@ -1,0 +1,7 @@
+.contents {
+  display: flex;
+  width: 100%;
+  background-color: #a4cafd;
+  color: white;
+  height: 10vh;
+}
