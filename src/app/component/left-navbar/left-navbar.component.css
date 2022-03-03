@@ -9,7 +9,7 @@
 }
 
 i {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .payroll,
@@ -19,4 +19,10 @@ i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.payroll h2,
+.timesheet h2,
+.profiles h2 {
+  font-size: 25px;
 }
