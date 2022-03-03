@@ -1,31 +1,30 @@
-header {
+.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding: 0 2rem;
   min-height: 13vh;
-  background-color: white;
-  width: 90%;
-  margin: auto;
 }
 
-.user {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.company h1 {
   color: #152d7c;
-  font-size: 15px;
-  width: 240px;
+  font-weight: bold;
 }
-.user i {
-  color: #152d7c;
-  font-size: 25px;
-}
-h1 {
-  color: #152d7c;
-}
-
 .tagline {
-  color: #9ec7fa;
+  color: #68a4f6;
   font-size: 17px;
   font-weight: 300;
+}
+.user {
+  color: #152d7c;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.user h2 {
+  font-weight: bold;
+  font-size: 25px;
+}
+.user i {
+  font-size: 25px;
 }

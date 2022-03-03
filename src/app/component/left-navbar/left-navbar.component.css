@@ -1,13 +1,11 @@
 .left-navbar {
+  background-color: #152d7c;
+  color: white;
+  min-height: 87vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #152d7c;
-  color: white;
-  padding: 20px;
-  min-height: 87vh;
-  width: 300px;
 }
 
 i {
