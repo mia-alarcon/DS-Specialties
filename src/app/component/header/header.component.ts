@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title = 'D&S Specialties';
-  tagline = 'Sparkling Clean Everytime!';
-  welcome = 'Welcome, James Cole!';
   constructor() {}
 
   ngOnInit(): void {}
