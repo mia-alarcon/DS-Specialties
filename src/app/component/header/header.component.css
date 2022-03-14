@@ -1,0 +1,30 @@
+.asd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  min-height: 13vh;
+}
+
+.company h1 {
+  color: #152d7c;
+  font-weight: bold;
+}
+.tagline {
+  color: #68a4f6;
+  font-size: 17px;
+  font-weight: 300;
+}
+.user {
+  color: #152d7c;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.user h2 {
+  font-weight: bold;
+  font-size: 25px;
+}
+.user i {
+  font-size: 25px;
+}
