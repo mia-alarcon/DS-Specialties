@@ -1,0 +1,157 @@
+html, body {
+display: flex;
+justify-content: center;
+min-height: 100vh;
+background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61846202-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=34c6125f226eed54d58cacf6e2ea1c97);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+body, div, h1, h4, form, p { 
+padding: 0;
+margin: 0;
+outline: none;
+font-family: Roboto, Arial, sans-serif;
+font-size: 16px;
+color: #13287e;
+}
+
+h1 {
+font-size: 32px;
+font-weight: 300;
+text-align: center;
+}
+h4 {
+font-size: 16px;
+font-weight: 300;
+text-align: center;
+}
+p {
+font-size: 12px;
+}
+hr {
+color: #a9a9a9;
+opacity: 0.3;
+}
+.form-block {
+max-width: 80vw; 
+max-height: 65vh;
+min-width: 60vw; 
+min-height: 20vh;
+margin: auto; 
+box-shadow: 0px 15px 25px rgba(3, 3, 53, 0.43); 
+background: #ebebeb; 
+}
+
+.main {
+    background-color: #ffffff;
+    
+}
+
+.main-content {
+    text-align: center;
+    justify-content: center;
+    padding: 150px 100px;
+}
+
+.side {
+    background-color: #13287e; 
+    border-right: 10px solid #a5cbfd;
+}
+
+#logo {
+    position: absolute;
+    margin: 20px 20px;
+    max-width: 10%;
+    min-width: 100px;
+}
+.account-type, .gender {
+margin: 15px 0;
+}
+
+input[type=radio] {
+display: none;
+}
+label#icon {
+margin: 0;
+border-radius: 5px 0 0 5px;
+}
+label.radio {
+position: relative;
+display: inline-block;
+padding-top: 4px;
+margin-right: 20px;
+text-indent: 30px;
+overflow: visible;
+cursor: pointer;
+}
+label.radio:before {
+content: "";
+position: absolute;
+top: 2px;
+left: 0;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #1c87c9;
+}
+label.radio:after {
+content: "";
+position: absolute;
+width: 9px;
+height: 4px;
+top: 8px;
+left: 4px;
+border: 3px solid #fff;
+border-top: none;
+border-right: none;
+transform: rotate(-45deg);
+opacity: 0;
+}
+::placeholder {
+    color: #b6bdd1;
+}
+input[type=radio]:checked + label:after {
+opacity: 1;
+}
+input[type=text], input[type=password] {
+width: calc(100% - 57px);
+height: 36px;
+margin: 13px 0 0 -5px;
+padding-left: 10px; 
+border-radius: 0 5px 5px 0;
+border: solid 1px #cbc9c9; 
+box-shadow: 1px 2px 5px rgba(0,0,0,.04); 
+background: #fff; 
+}
+input[type=password] {
+margin-bottom: 15px;
+}
+#icon {
+display: inline-block;
+padding: 6px 20px;
+background: #2881fb;
+box-shadow: 1px 2px 5px rgba(0,0,0,.04); 
+color: #fff;
+text-align: center;
+}
+.btn-block {
+margin-top: 10px;
+text-align: center;
+}
+button {
+min-width: 60%;
+padding: 10px 0;
+margin: 10px auto;
+border-radius: 5px; 
+border: none;
+font-size: 14px;
+font-weight: 600;
+}
+button#next {
+    background: #fee924; 
+    color: #13287e;
+}
+button:hover {
+background: #fcd836;
+}
