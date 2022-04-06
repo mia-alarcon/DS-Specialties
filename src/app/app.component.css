@@ -1,0 +1,20 @@
+.profile-header {
+background-color: #93c1fe;
+color: white;
+min-height: 10vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.date-nav {
+background-color: #75b0fd;
+padding: 10px;
+font-size: 20px;
+}
+
+.main-container {
+    min-height: 77vh;
+    background-color: #f5fafd;
+    padding: 2%;
+    }
