@@ -20,7 +20,7 @@ import { AddEmployeeComponent } from './profiles/add-employee/add-employee.compo
     ProfilesComponent,
     PayrollComponent,
     ToolbarComponent,
-    AddEmployeeComponent,
+    AddEmployeeComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
