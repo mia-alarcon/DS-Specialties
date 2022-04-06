@@ -1,27 +1,24 @@
 body {
   height: 100%;
 }
+
 button {
-  background: none;
-  color: inherit;
-  border: none;
+background: none;
+color: inherit;
+border: none;
 }
 
 .profile-header {
-  background-color: #93c1fe;
-  color: white;
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+background-color: #93c1fe;
+color: white;
+min-height: 10vh;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-.date-nav {
-  background-color: #75b0fd;
-  padding: 10px;
-  font-size: 20px;
-}
-
 .employee-profile {
-  min-height: 77vh;
   background-color: #f5fafd;
 }
+
+
+

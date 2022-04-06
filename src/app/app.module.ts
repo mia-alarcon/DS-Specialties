@@ -8,6 +8,7 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     TimesheetComponent,
     ProfilesComponent,
     PayrollComponent,
+    ToolbarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

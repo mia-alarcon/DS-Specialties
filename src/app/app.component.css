@@ -1,16 +1,10 @@
-.profile-header {
+.toolbar {
 background-color: #93c1fe;
 color: white;
 min-height: 10vh;
 display: flex;
 justify-content: center;
 align-items: center;
-}
-
-.date-nav {
-background-color: #75b0fd;
-padding: 10px;
-font-size: 20px;
 }
 
 .main-container {

@@ -1,16 +1,17 @@
 <div class="container-fluid nopadding">
+
   <div class="row">
     <app-header></app-header>
   </div>
+
   <div class="row nopadding">
     <div class="col-md-2 nopadding">
       <app-left-navbar></app-left-navbar>
     </div>
+
     <div class="col-md-10 nopadding">
-      <div class="profile-header">
-        <!-- Let's create a selector toolbar that's dependent on route. 
-        For now, change it manually. -->
-        <div class="date-nav">placeholder</div>  
+      <div class="toolbar">
+        <app-toolbar></app-toolbar> 
       </div>
       <div class="main-container">
         <!-- <app-profiles></app-profiles> -->
@@ -20,4 +21,5 @@
       </div>
     </div>
   </div>
+
 </div>
