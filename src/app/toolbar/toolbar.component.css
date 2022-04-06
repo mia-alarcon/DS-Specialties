@@ -1,0 +1,35 @@
+button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+
+.container {
+    
+    display: inline;
+    min-height: 10vh;
+    font-size: 20px;
+}
+
+.payroll {
+    display: flex;
+}
+
+#date-selector {
+    background-color: #80b5fcff;
+    padding: 10px;
+}
+
+.profiles {
+    display: inline;
+    padding: 30px;
+}
+
+
+#add-employee:hover {
+    background-color: rgb(126, 175, 239);
+}
+

@@ -9,6 +9,7 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AddEmployeeComponent } from './profiles/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     ProfilesComponent,
     PayrollComponent,
     ToolbarComponent,
+    AddEmployeeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
