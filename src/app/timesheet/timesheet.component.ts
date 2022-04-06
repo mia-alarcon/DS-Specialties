@@ -33,6 +33,15 @@ export class TimesheetComponent implements OnInit {
       employeePhone: '123-456-7890',
       employeeEmail: 'sam@dns.com',
       employeeAddress: '4400 University Dr, Fairfax VA 22030' 
+    },
+
+    {
+      employeeId: 104,
+      employeeFname: 'Nicole', 
+      employeeLname: 'Pham',
+      employeePhone: '123-456-7890',
+      employeeEmail: 'nicole@dns.com',
+      employeeAddress: '4400 University Dr, Fairfax VA 22030' 
     }
   ]
 
