@@ -11,25 +11,37 @@ export class TimesheetComponent implements OnInit {
     {
       employeeId: 101,
       employeeFname: 'Mark', 
-      employeeLname: 'Otto'
+      employeeLname: 'Otto',
+      clockIn: '8:00 AM',
+      clockOut: '5:00 PM',
+      total: '9 hrs'
     },
 
     {
       employeeId: 102,
       employeeFname: 'Jacob', 
-      employeeLname: 'Thorton'
+      employeeLname: 'Thorton',
+      clockIn: '9:00 AM',
+      clockOut: '5:00 PM',
+      total: '8 hrs'
     },
 
     {
       employeeId: 103,
       employeeFname: 'Jennifer', 
-      employeeLname: 'Brown'
+      employeeLname: 'Brown',
+      clockIn: '7:00 AM',
+      clockOut: '4:00 PM',
+      total: '9hrs'
     },
 
     {
       employeeId: 104,
       employeeFname: 'Nicole', 
-      employeeLname: 'Pham'
+      employeeLname: 'Pham',
+      clockIn: '2:00 PM',
+      clockOut: '5:00 PM',
+      total: '3hrs'
     }
   ]
 
@@ -44,4 +56,7 @@ export interface IEmployee {
   employeeId: number;
   employeeFname: string;
   employeeLname: string;
+  clockIn: string;
+  clockOut: string;
+  total: string;
 }
