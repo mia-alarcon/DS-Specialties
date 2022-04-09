@@ -1,6 +1,7 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { APIService, Employee } from '../API.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { APIService, Employee } from '../API.service';
   templateUrl: './dbtest.component.html',
   styleUrls: ['./dbtest.component.css']
 })
-export class DbtestComponent implements OnInit {
+export class DbtestComponent implements OnInit, OnDestroy {
   title = 'amplify-angular-app';
   public createForm: FormGroup;
 
@@ -21,11 +22,27 @@ export class DbtestComponent implements OnInit {
     });
   }
 
+  private subscription: Subscription | null = null;
+
   async ngOnInit() {
     /* fetch employees when the app loads */
     this.api.ListEmployees().then((event) => {
       this.employees = event.items as Employee[];
     });
+
+    this.subscription = <Subscription>(
+      this.api.OnCreateEmployeeListener.subscribe((event: any) => {
+        const newEmployee =  event.value.data.onCreateEmployee;
+        this.employees = [newEmployee, ...this.employees];
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    this.subscription = null;
   }
 
   public onCreate(employee: Employee) {
