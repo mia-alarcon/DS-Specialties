@@ -1,6 +1,13 @@
 <div class="container">
+
     <div *ngIf="hasRoute('timesheet')" class="d-flex ps-5 pe-5 justify-content-between">
-        <span id="date-selector">Timesheet View</span>
+        <span id="date-selector">Daily View</span>
+        <button routerLink="weekly-view" id="weekly-view"><i class="bi btn-primary-outline pull-right"></i> Weekly View</button>
+    </div>
+
+    <div *ngIf="hasRoute('weekly-view')" class="d-flex ps-5 pe-5 justify-content-between">
+        <span id="date-selector">Weekly View</span>
+        <button routerLink="timesheet" id="timesheet"><i class="bi btn-primary-outline pull-right"></i> Daily View</button>
     </div>
 
     <div *ngIf="hasRoute('payroll')" class="d-flex ps-5 pe-5 justify-content-between">

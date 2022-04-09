@@ -10,6 +10,10 @@ import { PayrollComponent } from './payroll/payroll.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AddEmployeeComponent } from './profiles/add-employee/add-employee.component';
+import { WeeklyComponent } from './timesheet/weekly/weekly.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { AddEmployeeComponent } from './profiles/add-employee/add-employee.compo
     ProfilesComponent,
     PayrollComponent,
     ToolbarComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    WeeklyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,6 +1,6 @@
 button {
     background-color: inherit;
-    color: inherit;
+    color: #152d7c;
     border: none;
     font: inherit;
     cursor: pointer;
@@ -31,5 +31,10 @@ button {
 
 #add-employee:hover {
     background-color: rgb(126, 175, 239);
+}
+
+#weekly-view:hover, #timesheet:hover {
+    background-color: rgb(126, 175, 239);
+    color: white;
 }
 
