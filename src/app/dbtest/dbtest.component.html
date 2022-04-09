@@ -1,0 +1,24 @@
+<p>dbtest works!</p>
+
+<div class="form-body">
+    <form
+      autocomplete="off"
+      [formGroup]="createForm"
+      (ngSubmit)="onCreate(createForm.value)"
+    >
+      <div>
+        <label>Name: </label>
+        <input type="text" formControlName="name" autocomplete="off" />
+      </div>
+      <div>
+        <label>Phone Number: </label>
+        <input type="text" formControlName="phoneNum" autocomplete="off" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div *ngFor="let employee of employees">
+    <div>{{ employee.name }}</div>
+    <div>{{ employee.phoneNum }}</div>
+  </div>
