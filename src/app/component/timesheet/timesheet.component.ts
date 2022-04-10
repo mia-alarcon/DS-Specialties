@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService, Employee } from 'src/app/API.service';
 
 @Component({
   selector: 'app-timesheet',

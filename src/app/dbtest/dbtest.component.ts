@@ -28,6 +28,7 @@ export class DbtestComponent implements OnInit, OnDestroy {
     /* fetch employees when the app loads */
     this.api.ListEmployees().then((event) => {
       this.employees = event.items as Employee[];
+      console.log(this.employees);
     });
 
     this.subscription = <Subscription>(
