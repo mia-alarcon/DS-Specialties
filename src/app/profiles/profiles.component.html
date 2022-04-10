@@ -13,13 +13,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let data of dataList">
-            <th scope="row">{{data.employeeId}}</th>
-            <td>{{data.employeeFname}}</td>
-            <td>{{data.employeeLname}}</td>
-            <td>{{data.employeePhone}}</td>
-            <td>{{data.employeeEmail}}</td>
-            <td>{{data.employeeAddress}}</td>
+          <tr *ngFor="let employee of employees">
+            <th scope="row">{{employee.employeeID}}</th>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.phoneNum}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.email}}</td>
             <td><i class="bi bi-pencil-fill" style="color: rgb(246, 212, 65)"></i> 
                 <i class="bi bi-trash-fill" style="color:rgb(177, 43, 43); margin-left: 5px;"></i></td>
           </tr>
@@ -27,3 +27,13 @@
       </table>
     </div>
     </body>
+
+   <!-- <div *ngFor="let employee of employees">
+      <div>{{ employee.employeeID }}</div>
+      <div>{{ employee.firstName }}</div>
+      <div>{{ employee.lastName }}</div>
+      <div>{{ employee.phoneNum }}</div>
+      <div>{{ employee.address }}</div>
+      <div>{{ employee.email }}</div>
+    </div>
+    -->

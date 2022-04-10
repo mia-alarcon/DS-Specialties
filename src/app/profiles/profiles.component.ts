@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService, Employee } from 'src/app/API.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-profiles',
@@ -6,57 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profiles.component.css']
 })
 export class ProfilesComponent implements OnInit {
+  title = 'amplify-angular-app';
 
-  public dataList: Array<IEmployee> = [
-    {
-      employeeId: 101,
-      employeeFname: 'Mark', 
-      employeeLname: 'Otto',
-      employeePhone: '123-456-7890',
-      employeeEmail: 'mark@dns.com',
-      employeeAddress: '4400 University Dr, Fairfax VA 22030' 
-    },
+  public employees: Array<Employee> = [];
 
-    {
-      employeeId: 102,
-      employeeFname: 'Jacob', 
-      employeeLname: 'Thorton',
-      employeePhone: '123-456-7890',
-      employeeEmail: 'jacob@dns.com',
-      employeeAddress: '4400 University Dr, Fairfax VA 22030' 
-    },
+  constructor(private api: APIService) { }
 
-    {
-      employeeId: 103,
-      employeeFname: 'Jennifer', 
-      employeeLname: 'Brown',
-      employeePhone: '123-456-7890',
-      employeeEmail: 'sam@dns.com',
-      employeeAddress: '4400 University Dr, Fairfax VA 22030' 
-    },
+  private subscription: Subscription | null = null;
 
-    {
-      employeeId: 104,
-      employeeFname: 'Nicole', 
-      employeeLname: 'Pham',
-      employeePhone: '123-456-7890',
-      employeeEmail: 'nicole@dns.com',
-      employeeAddress: '4400 University Dr, Fairfax VA 22030' 
-    }
-  ]
+  async ngOnInit() {
+    /* fetch employees when the app loads */
+    this.api.ListEmployees().then((event) => {
+      this.employees = event.items as Employee[];
+      console.log(this.employees);
+    });
 
-  constructor() { }
-
-  ngOnInit(): void {
+    this.subscription = <Subscription>(
+      this.api.OnCreateEmployeeListener.subscribe((event: any) => {
+        const newEmployee =  event.value.data.onCreateEmployee;
+        this.employees = [newEmployee, ...this.employees];
+      })
+    );
   }
-
-}
-
-export interface IEmployee {
-  employeeId: number;
-  employeeFname: string;
-  employeeLname: string;
-  employeePhone: string;
-  employeeEmail: string;
-  employeeAddress: string;
 }
