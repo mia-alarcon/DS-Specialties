@@ -12,6 +12,8 @@ import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { APIService } from './API.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [APIService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

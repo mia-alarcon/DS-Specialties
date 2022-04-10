@@ -31,11 +31,12 @@
         <td>4400 University Dr, Fairfax, VA 22030</td>
       </tr>
       <tr>
-        <th scope="row">003</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>123-456-7890</td>
-        <td>larry@dns.com</td>
-        <td>4400 University Dr, Fairfax, VA 22030</td>
+        <th scope="row">{{ employees[1].employeeID }}</th>
+        <td colspan="2">{{ employees[1].firstName }}</td>
+        <td>{{ employees[1].lastName }}</td>
+        <td>{{ employees[1].phoneNum }}</td>
+        <td>{{ employees[1].address }}</td>
+        <td>{{ employees[1].email }}</td>
       </tr>
     </tbody>
   </table>
