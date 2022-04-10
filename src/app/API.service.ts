@@ -17,13 +17,21 @@ export type __SubscriptionContainer = {
 
 export type CreateEmployeeInput = {
   id?: string | null;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
 };
 
 export type ModelEmployeeConditionInput = {
-  name?: ModelStringInput | null;
+  employeeID?: ModelStringInput | null;
+  firstName?: ModelStringInput | null;
+  lastName?: ModelStringInput | null;
   phoneNum?: ModelStringInput | null;
+  address?: ModelStringInput | null;
+  email?: ModelStringInput | null;
   and?: Array<ModelEmployeeConditionInput | null> | null;
   or?: Array<ModelEmployeeConditionInput | null> | null;
   not?: ModelEmployeeConditionInput | null;
@@ -71,16 +79,24 @@ export type ModelSizeInput = {
 export type Employee = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
 
 export type UpdateEmployeeInput = {
   id: string;
-  name?: string | null;
+  employeeID?: string | null;
+  firstName?: string | null;
+  lastName?: string | null;
   phoneNum?: string | null;
+  address?: string | null;
+  email?: string | null;
 };
 
 export type DeleteEmployeeInput = {
@@ -89,8 +105,12 @@ export type DeleteEmployeeInput = {
 
 export type ModelEmployeeFilterInput = {
   id?: ModelIDInput | null;
-  name?: ModelStringInput | null;
+  employeeID?: ModelStringInput | null;
+  firstName?: ModelStringInput | null;
+  lastName?: ModelStringInput | null;
   phoneNum?: ModelStringInput | null;
+  address?: ModelStringInput | null;
+  email?: ModelStringInput | null;
   and?: Array<ModelEmployeeFilterInput | null> | null;
   or?: Array<ModelEmployeeFilterInput | null> | null;
   not?: ModelEmployeeFilterInput | null;
@@ -121,8 +141,12 @@ export type ModelEmployeeConnection = {
 export type CreateEmployeeMutation = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -130,8 +154,12 @@ export type CreateEmployeeMutation = {
 export type UpdateEmployeeMutation = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -139,8 +167,12 @@ export type UpdateEmployeeMutation = {
 export type DeleteEmployeeMutation = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -148,8 +180,12 @@ export type DeleteEmployeeMutation = {
 export type GetEmployeeQuery = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -159,8 +195,12 @@ export type ListEmployeesQuery = {
   items: Array<{
     __typename: "Employee";
     id: string;
-    name: string;
+    employeeID: string;
+    firstName: string;
+    lastName: string;
     phoneNum: string;
+    address: string;
+    email: string;
     createdAt: string;
     updatedAt: string;
   } | null>;
@@ -170,8 +210,12 @@ export type ListEmployeesQuery = {
 export type OnCreateEmployeeSubscription = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -179,8 +223,12 @@ export type OnCreateEmployeeSubscription = {
 export type OnUpdateEmployeeSubscription = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -188,8 +236,12 @@ export type OnUpdateEmployeeSubscription = {
 export type OnDeleteEmployeeSubscription = {
   __typename: "Employee";
   id: string;
-  name: string;
+  employeeID: string;
+  firstName: string;
+  lastName: string;
   phoneNum: string;
+  address: string;
+  email: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -206,8 +258,12 @@ export class APIService {
         createEmployee(input: $input, condition: $condition) {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }
@@ -231,8 +287,12 @@ export class APIService {
         updateEmployee(input: $input, condition: $condition) {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }
@@ -256,8 +316,12 @@ export class APIService {
         deleteEmployee(input: $input, condition: $condition) {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }
@@ -278,8 +342,12 @@ export class APIService {
         getEmployee(id: $id) {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }
@@ -303,8 +371,12 @@ export class APIService {
           items {
             __typename
             id
-            name
+            employeeID
+            firstName
+            lastName
             phoneNum
+            address
+            email
             createdAt
             updatedAt
           }
@@ -334,8 +406,12 @@ export class APIService {
         onCreateEmployee {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }
@@ -353,8 +429,12 @@ export class APIService {
         onUpdateEmployee {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }
@@ -372,8 +452,12 @@ export class APIService {
         onDeleteEmployee {
           __typename
           id
-          name
+          employeeID
+          firstName
+          lastName
           phoneNum
+          address
+          email
           createdAt
           updatedAt
         }

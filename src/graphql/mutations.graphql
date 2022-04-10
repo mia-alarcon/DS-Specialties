@@ -5,8 +5,12 @@ mutation CreateEmployee(
 ) {
   createEmployee(input: $input, condition: $condition) {
     id
-    name
+    employeeID
+    firstName
+    lastName
     phoneNum
+    address
+    email
     createdAt
     updatedAt
   }
@@ -17,8 +21,12 @@ mutation UpdateEmployee(
 ) {
   updateEmployee(input: $input, condition: $condition) {
     id
-    name
+    employeeID
+    firstName
+    lastName
     phoneNum
+    address
+    email
     createdAt
     updatedAt
   }
@@ -29,8 +37,12 @@ mutation DeleteEmployee(
 ) {
   deleteEmployee(input: $input, condition: $condition) {
     id
-    name
+    employeeID
+    firstName
+    lastName
     phoneNum
+    address
+    email
     createdAt
     updatedAt
   }

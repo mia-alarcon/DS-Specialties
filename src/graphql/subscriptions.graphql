@@ -2,8 +2,12 @@
 subscription OnCreateEmployee {
   onCreateEmployee {
     id
-    name
+    employeeID
+    firstName
+    lastName
     phoneNum
+    address
+    email
     createdAt
     updatedAt
   }
@@ -11,8 +15,12 @@ subscription OnCreateEmployee {
 subscription OnUpdateEmployee {
   onUpdateEmployee {
     id
-    name
+    employeeID
+    firstName
+    lastName
     phoneNum
+    address
+    email
     createdAt
     updatedAt
   }
@@ -20,8 +28,12 @@ subscription OnUpdateEmployee {
 subscription OnDeleteEmployee {
   onDeleteEmployee {
     id
-    name
+    employeeID
+    firstName
+    lastName
     phoneNum
+    address
+    email
     createdAt
     updatedAt
   }

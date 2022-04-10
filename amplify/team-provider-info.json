@@ -10,6 +10,11 @@
       "StackName": "amplify-dsspecialties-dev-11322",
       "StackId": "arn:aws:cloudformation:us-east-1:741008610800:stack/amplify-dsspecialties-dev-11322/c8582b90-b7c3-11ec-9f70-124e061bb86d",
       "AmplifyAppId": "d2vwofkeuihjdi"
+    },
+    "categories": {
+      "auth": {
+        "dsspecialties90a20c07": {}
+      }
     }
   }
 }

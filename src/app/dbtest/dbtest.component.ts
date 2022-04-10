@@ -17,7 +17,11 @@ export class DbtestComponent implements OnInit, OnDestroy {
 
   constructor(private api: APIService, private fb: FormBuilder) { 
     this.createForm = this.fb.group({
-      name: ['', Validators.required],
+      employeeID: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      address: ['', Validators.required],
+      email: ['', Validators.required],
       phoneNum: ['', Validators.required]
     });
   }
