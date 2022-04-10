@@ -28,4 +28,16 @@ export class AddEmployeeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public onCreate(employee: Employee) {
+    this.api
+      .CreateEmployee(employee)
+      .then((event) => {
+        console.log('employee created!');
+        this.createForm.reset();
+      })
+      .catch((e) => {
+        console.log('error creating employee...', e)
+      });
+  }
+
 }
