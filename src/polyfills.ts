@@ -1,3 +1,7 @@
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+};
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -17,7 +21,8 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
-
+ import 'core-js/es/typed-array';
+ import 'core-js/es/object';
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags

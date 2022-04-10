@@ -1,0 +1,40 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateEmployee {
+  onCreateEmployee {
+    id
+    employeeID
+    firstName
+    lastName
+    phoneNum
+    address
+    email
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateEmployee {
+  onUpdateEmployee {
+    id
+    employeeID
+    firstName
+    lastName
+    phoneNum
+    address
+    email
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteEmployee {
+  onDeleteEmployee {
+    id
+    employeeID
+    firstName
+    lastName
+    phoneNum
+    address
+    email
+    createdAt
+    updatedAt
+  }
+}

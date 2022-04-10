@@ -4,7 +4,15 @@
     <h2 class="tagline">{{ tagline }}</h2>
   </div>
   <div class="col-md-6 user">
-    <h2>Welcome, James!</h2>
+    <amplify-authenticator>
+      <ng-template
+        amplifySlot="authenticated"
+        let-user="user"
+        let-signOut="signOut"
+      >
+        <h1>Welcome {{ user.username }}!</h1>
+      </ng-template>
+    </amplify-authenticator>
     <i class="bi bi-person-fill"></i>
   </div>
 </div>
