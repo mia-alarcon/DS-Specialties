@@ -1,35 +1,75 @@
-button {
-    background-color: inherit;
-    color: inherit;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    outline: none;
-  }
-
-.container {
-    
-    display: inline;
-    min-height: 10vh;
-    font-size: 20px;
+div {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+}
+div button {
+  margin-left: 25px;
 }
 
-.payroll {
-    display: flex;
+div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.toolbar {
+  min-height: 10vh;
+  font-size: 20px;
 }
 
 #date-selector {
-    background-color: #80b5fcff;
-    padding: 10px;
+  background-color: #80b5fcff;
+  padding: 10px;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  border-radius: 50px;
+  padding: 0rem 0.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+button:hover {
+  background-color: #80b5fcff;
+}
+i {
+  margin-right: 10px;
+}
+/* button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  display: inline;
+  min-height: 10vh;
+  font-size: 20px;
+}
+
+
+
+.payroll {
+  display: flex;
+}
+
+#date-selector {
+  background-color: #80b5fcff;
+  padding: 10px;
 }
 
 .profiles {
-    display: inline;
-    padding: 30px;
+  display: inline;
+  padding: 30px;
 }
-
 
 #add-employee:hover {
-    background-color: rgb(126, 175, 239);
-}
-
+  background-color: rgb(126, 175, 239);
+} */

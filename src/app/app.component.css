@@ -1,10 +1,11 @@
 .toolbar {
-background-color: #93c1fe;
-color: white;
+  background-color: #93c1fe;
+  color: white;
 }
-
+.left-nav {
+  background-color: #152d7c;
+}
 .main-container {
-min-height: 77vh;
-background-color: #f5fafd;
-padding: 2%;
+  min-height: 100vh;
+  background-color: #f5fafd;
 }

@@ -1,0 +1,43 @@
+label,
+h2 {
+  color: #152d7c;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form {
+  padding: 2rem;
+}
+
+.buttons {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  border: none;
+  color: white;
+  background-color: #93c1fe;
+  border-color: #93c1fe;
+}
+.btn-primary:hover {
+  background-color: #6897d4;
+}
+/* .form-group {
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #152d7c;
+  font-weight: bold;
+  margin: 30px 0;
+}
+input::placeholder {
+  color: rgb(175, 175, 175);
+} */
