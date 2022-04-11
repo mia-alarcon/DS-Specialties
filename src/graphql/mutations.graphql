@@ -1,4 +1,46 @@
 # this is an auto generated file. This will be overwritten
+mutation CreateTimesheet(
+  $input: CreateTimesheetInput!
+  $condition: ModelTimesheetConditionInput
+) {
+  createTimesheet(input: $input, condition: $condition) {
+    id
+    employeeID
+    firstName
+    clockIn
+    clockOut
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateTimesheet(
+  $input: UpdateTimesheetInput!
+  $condition: ModelTimesheetConditionInput
+) {
+  updateTimesheet(input: $input, condition: $condition) {
+    id
+    employeeID
+    firstName
+    clockIn
+    clockOut
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteTimesheet(
+  $input: DeleteTimesheetInput!
+  $condition: ModelTimesheetConditionInput
+) {
+  deleteTimesheet(input: $input, condition: $condition) {
+    id
+    employeeID
+    firstName
+    clockIn
+    clockOut
+    createdAt
+    updatedAt
+  }
+}
 mutation CreateEmployee(
   $input: CreateEmployeeInput!
   $condition: ModelEmployeeConditionInput
