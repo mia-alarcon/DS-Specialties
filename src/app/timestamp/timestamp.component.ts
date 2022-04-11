@@ -53,6 +53,18 @@ export class TimestampComponent implements OnInit {
       });
   }
 
+  public onUpdate(timesheet: Timesheet) {
+    this.api
+      .UpdateTimesheet(timesheet)
+      .then((event) => {
+        console.log('timestamp updated!');
+        this.createForm.reset();
+      })
+      .catch((e) => {
+        console.log('error updating timestamp...', e)
+      });
+  }
+
 
 }
 

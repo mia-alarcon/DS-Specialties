@@ -25,3 +25,29 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+
+  <div class="form-body">
+    <form
+      autocomplete="off"
+      [formGroup]="createForm"
+      (ngSubmit)="onUpdate(createForm.value)"
+    >
+      <div>
+        <label>Employee ID </label>
+        <input type="text" formControlName="employeeID" autocomplete="off" />
+      </div>
+      <div>
+        <label>First Name: </label>
+        <input type="text" formControlName="firstName" autocomplete="off" />
+      </div>
+      <div>
+        <label>in: </label>
+        <input type="time" formControlName="clockIn" autocomplete="off" />
+      </div>
+      <div>
+        <label>out: </label>
+        <input type="time" formControlName="clockOut" autocomplete="off" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>

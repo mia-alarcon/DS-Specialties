@@ -17,7 +17,16 @@
 
   <button class="nav-button">
     <i class="bi bi-power"></i>
-    <h2>LOGOUT</h2>
+    <!--<h2>LOGOUT</h2>-->
+    <amplify-authenticator>
+      <ng-template
+        amplifySlot="authenticated"
+        let-user="user"
+        let-signOut="signOut"
+      >
+        <button (click)="signOut()">SIGN OUT</button>
+      </ng-template>
+    </amplify-authenticator>
   </button>
 </div>
 </body>

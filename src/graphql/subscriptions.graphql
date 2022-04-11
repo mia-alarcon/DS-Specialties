@@ -1,7 +1,6 @@
 # this is an auto generated file. This will be overwritten
 subscription OnCreateTimesheet {
   onCreateTimesheet {
-    id
     employeeID
     firstName
     clockIn
@@ -12,7 +11,6 @@ subscription OnCreateTimesheet {
 }
 subscription OnUpdateTimesheet {
   onUpdateTimesheet {
-    id
     employeeID
     firstName
     clockIn
@@ -23,7 +21,6 @@ subscription OnUpdateTimesheet {
 }
 subscription OnDeleteTimesheet {
   onDeleteTimesheet {
-    id
     employeeID
     firstName
     clockIn
@@ -34,7 +31,6 @@ subscription OnDeleteTimesheet {
 }
 subscription OnCreateEmployee {
   onCreateEmployee {
-    id
     employeeID
     firstName
     lastName
@@ -47,7 +43,6 @@ subscription OnCreateEmployee {
 }
 subscription OnUpdateEmployee {
   onUpdateEmployee {
-    id
     employeeID
     firstName
     lastName
@@ -60,7 +55,6 @@ subscription OnUpdateEmployee {
 }
 subscription OnDeleteEmployee {
   onDeleteEmployee {
-    id
     employeeID
     firstName
     lastName

@@ -4,7 +4,6 @@ mutation CreateTimesheet(
   $condition: ModelTimesheetConditionInput
 ) {
   createTimesheet(input: $input, condition: $condition) {
-    id
     employeeID
     firstName
     clockIn
@@ -18,7 +17,6 @@ mutation UpdateTimesheet(
   $condition: ModelTimesheetConditionInput
 ) {
   updateTimesheet(input: $input, condition: $condition) {
-    id
     employeeID
     firstName
     clockIn
@@ -32,7 +30,6 @@ mutation DeleteTimesheet(
   $condition: ModelTimesheetConditionInput
 ) {
   deleteTimesheet(input: $input, condition: $condition) {
-    id
     employeeID
     firstName
     clockIn
@@ -46,7 +43,6 @@ mutation CreateEmployee(
   $condition: ModelEmployeeConditionInput
 ) {
   createEmployee(input: $input, condition: $condition) {
-    id
     employeeID
     firstName
     lastName
@@ -62,7 +58,6 @@ mutation UpdateEmployee(
   $condition: ModelEmployeeConditionInput
 ) {
   updateEmployee(input: $input, condition: $condition) {
-    id
     employeeID
     firstName
     lastName
@@ -78,7 +73,6 @@ mutation DeleteEmployee(
   $condition: ModelEmployeeConditionInput
 ) {
   deleteEmployee(input: $input, condition: $condition) {
-    id
     employeeID
     firstName
     lastName

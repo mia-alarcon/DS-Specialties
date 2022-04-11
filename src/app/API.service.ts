@@ -19,7 +19,6 @@ export type __SubscriptionContainer = {
 };
 
 export type CreateTimesheetInput = {
-  id?: string | null;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -27,7 +26,6 @@ export type CreateTimesheetInput = {
 };
 
 export type ModelTimesheetConditionInput = {
-  employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
@@ -77,7 +75,6 @@ export type ModelSizeInput = {
 
 export type Timesheet = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -87,19 +84,17 @@ export type Timesheet = {
 };
 
 export type UpdateTimesheetInput = {
-  id: string;
-  employeeID?: string | null;
+  employeeID: string;
   firstName?: string | null;
   clockIn?: string | null;
   clockOut?: string | null;
 };
 
 export type DeleteTimesheetInput = {
-  id: string;
+  employeeID: string;
 };
 
 export type CreateEmployeeInput = {
-  id?: string | null;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -109,7 +104,6 @@ export type CreateEmployeeInput = {
 };
 
 export type ModelEmployeeConditionInput = {
-  employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
   lastName?: ModelStringInput | null;
   phoneNum?: ModelStringInput | null;
@@ -122,7 +116,6 @@ export type ModelEmployeeConditionInput = {
 
 export type Employee = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -134,8 +127,7 @@ export type Employee = {
 };
 
 export type UpdateEmployeeInput = {
-  id: string;
-  employeeID?: string | null;
+  employeeID: string;
   firstName?: string | null;
   lastName?: string | null;
   phoneNum?: string | null;
@@ -144,11 +136,10 @@ export type UpdateEmployeeInput = {
 };
 
 export type DeleteEmployeeInput = {
-  id: string;
+  employeeID: string;
 };
 
 export type ModelTimesheetFilterInput = {
-  id?: ModelIDInput | null;
   employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
@@ -158,21 +149,10 @@ export type ModelTimesheetFilterInput = {
   not?: ModelTimesheetFilterInput | null;
 };
 
-export type ModelIDInput = {
-  ne?: string | null;
-  eq?: string | null;
-  le?: string | null;
-  lt?: string | null;
-  ge?: string | null;
-  gt?: string | null;
-  contains?: string | null;
-  notContains?: string | null;
-  between?: Array<string | null> | null;
-  beginsWith?: string | null;
-  attributeExists?: boolean | null;
-  attributeType?: ModelAttributeTypes | null;
-  size?: ModelSizeInput | null;
-};
+export enum ModelSortDirection {
+  ASC = "ASC",
+  DESC = "DESC"
+}
 
 export type ModelTimesheetConnection = {
   __typename: "ModelTimesheetConnection";
@@ -181,7 +161,6 @@ export type ModelTimesheetConnection = {
 };
 
 export type ModelEmployeeFilterInput = {
-  id?: ModelIDInput | null;
   employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
   lastName?: ModelStringInput | null;
@@ -201,7 +180,6 @@ export type ModelEmployeeConnection = {
 
 export type CreateTimesheetMutation = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -212,7 +190,6 @@ export type CreateTimesheetMutation = {
 
 export type UpdateTimesheetMutation = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -223,7 +200,6 @@ export type UpdateTimesheetMutation = {
 
 export type DeleteTimesheetMutation = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -234,7 +210,6 @@ export type DeleteTimesheetMutation = {
 
 export type CreateEmployeeMutation = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -247,7 +222,6 @@ export type CreateEmployeeMutation = {
 
 export type UpdateEmployeeMutation = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -260,7 +234,6 @@ export type UpdateEmployeeMutation = {
 
 export type DeleteEmployeeMutation = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -273,7 +246,6 @@ export type DeleteEmployeeMutation = {
 
 export type GetTimesheetQuery = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -286,7 +258,6 @@ export type ListTimesheetsQuery = {
   __typename: "ModelTimesheetConnection";
   items: Array<{
     __typename: "Timesheet";
-    id: string;
     employeeID: string;
     firstName: string;
     clockIn?: string | null;
@@ -299,7 +270,6 @@ export type ListTimesheetsQuery = {
 
 export type GetEmployeeQuery = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -314,7 +284,6 @@ export type ListEmployeesQuery = {
   __typename: "ModelEmployeeConnection";
   items: Array<{
     __typename: "Employee";
-    id: string;
     employeeID: string;
     firstName: string;
     lastName: string;
@@ -329,7 +298,6 @@ export type ListEmployeesQuery = {
 
 export type OnCreateTimesheetSubscription = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -340,7 +308,6 @@ export type OnCreateTimesheetSubscription = {
 
 export type OnUpdateTimesheetSubscription = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -351,7 +318,6 @@ export type OnUpdateTimesheetSubscription = {
 
 export type OnDeleteTimesheetSubscription = {
   __typename: "Timesheet";
-  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
@@ -362,7 +328,6 @@ export type OnDeleteTimesheetSubscription = {
 
 export type OnCreateEmployeeSubscription = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -375,7 +340,6 @@ export type OnCreateEmployeeSubscription = {
 
 export type OnUpdateEmployeeSubscription = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -388,7 +352,6 @@ export type OnUpdateEmployeeSubscription = {
 
 export type OnDeleteEmployeeSubscription = {
   __typename: "Employee";
-  id: string;
   employeeID: string;
   firstName: string;
   lastName: string;
@@ -410,7 +373,6 @@ export class APIService {
     const statement = `mutation CreateTimesheet($input: CreateTimesheetInput!, $condition: ModelTimesheetConditionInput) {
         createTimesheet(input: $input, condition: $condition) {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -437,7 +399,6 @@ export class APIService {
     const statement = `mutation UpdateTimesheet($input: UpdateTimesheetInput!, $condition: ModelTimesheetConditionInput) {
         updateTimesheet(input: $input, condition: $condition) {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -464,7 +425,6 @@ export class APIService {
     const statement = `mutation DeleteTimesheet($input: DeleteTimesheetInput!, $condition: ModelTimesheetConditionInput) {
         deleteTimesheet(input: $input, condition: $condition) {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -491,7 +451,6 @@ export class APIService {
     const statement = `mutation CreateEmployee($input: CreateEmployeeInput!, $condition: ModelEmployeeConditionInput) {
         createEmployee(input: $input, condition: $condition) {
           __typename
-          id
           employeeID
           firstName
           lastName
@@ -520,7 +479,6 @@ export class APIService {
     const statement = `mutation UpdateEmployee($input: UpdateEmployeeInput!, $condition: ModelEmployeeConditionInput) {
         updateEmployee(input: $input, condition: $condition) {
           __typename
-          id
           employeeID
           firstName
           lastName
@@ -549,7 +507,6 @@ export class APIService {
     const statement = `mutation DeleteEmployee($input: DeleteEmployeeInput!, $condition: ModelEmployeeConditionInput) {
         deleteEmployee(input: $input, condition: $condition) {
           __typename
-          id
           employeeID
           firstName
           lastName
@@ -571,11 +528,10 @@ export class APIService {
     )) as any;
     return <DeleteEmployeeMutation>response.data.deleteEmployee;
   }
-  async GetTimesheet(id: string): Promise<GetTimesheetQuery> {
-    const statement = `query GetTimesheet($id: ID!) {
-        getTimesheet(id: $id) {
+  async GetTimesheet(employeeID: string): Promise<GetTimesheetQuery> {
+    const statement = `query GetTimesheet($employeeID: String!) {
+        getTimesheet(employeeID: $employeeID) {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -585,7 +541,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      id
+      employeeID
     };
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -593,16 +549,17 @@ export class APIService {
     return <GetTimesheetQuery>response.data.getTimesheet;
   }
   async ListTimesheets(
+    employeeID?: string,
     filter?: ModelTimesheetFilterInput,
     limit?: number,
-    nextToken?: string
+    nextToken?: string,
+    sortDirection?: ModelSortDirection
   ): Promise<ListTimesheetsQuery> {
-    const statement = `query ListTimesheets($filter: ModelTimesheetFilterInput, $limit: Int, $nextToken: String) {
-        listTimesheets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    const statement = `query ListTimesheets($employeeID: String, $filter: ModelTimesheetFilterInput, $limit: Int, $nextToken: String, $sortDirection: ModelSortDirection) {
+        listTimesheets(employeeID: $employeeID, filter: $filter, limit: $limit, nextToken: $nextToken, sortDirection: $sortDirection) {
           __typename
           items {
             __typename
-            id
             employeeID
             firstName
             clockIn
@@ -614,6 +571,9 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {};
+    if (employeeID) {
+      gqlAPIServiceArguments.employeeID = employeeID;
+    }
     if (filter) {
       gqlAPIServiceArguments.filter = filter;
     }
@@ -623,16 +583,18 @@ export class APIService {
     if (nextToken) {
       gqlAPIServiceArguments.nextToken = nextToken;
     }
+    if (sortDirection) {
+      gqlAPIServiceArguments.sortDirection = sortDirection;
+    }
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
     )) as any;
     return <ListTimesheetsQuery>response.data.listTimesheets;
   }
-  async GetEmployee(id: string): Promise<GetEmployeeQuery> {
-    const statement = `query GetEmployee($id: ID!) {
-        getEmployee(id: $id) {
+  async GetEmployee(employeeID: string): Promise<GetEmployeeQuery> {
+    const statement = `query GetEmployee($employeeID: String!) {
+        getEmployee(employeeID: $employeeID) {
           __typename
-          id
           employeeID
           firstName
           lastName
@@ -644,7 +606,7 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      id
+      employeeID
     };
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -652,16 +614,17 @@ export class APIService {
     return <GetEmployeeQuery>response.data.getEmployee;
   }
   async ListEmployees(
+    employeeID?: string,
     filter?: ModelEmployeeFilterInput,
     limit?: number,
-    nextToken?: string
+    nextToken?: string,
+    sortDirection?: ModelSortDirection
   ): Promise<ListEmployeesQuery> {
-    const statement = `query ListEmployees($filter: ModelEmployeeFilterInput, $limit: Int, $nextToken: String) {
-        listEmployees(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    const statement = `query ListEmployees($employeeID: String, $filter: ModelEmployeeFilterInput, $limit: Int, $nextToken: String, $sortDirection: ModelSortDirection) {
+        listEmployees(employeeID: $employeeID, filter: $filter, limit: $limit, nextToken: $nextToken, sortDirection: $sortDirection) {
           __typename
           items {
             __typename
-            id
             employeeID
             firstName
             lastName
@@ -675,6 +638,9 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {};
+    if (employeeID) {
+      gqlAPIServiceArguments.employeeID = employeeID;
+    }
     if (filter) {
       gqlAPIServiceArguments.filter = filter;
     }
@@ -683,6 +649,9 @@ export class APIService {
     }
     if (nextToken) {
       gqlAPIServiceArguments.nextToken = nextToken;
+    }
+    if (sortDirection) {
+      gqlAPIServiceArguments.sortDirection = sortDirection;
     }
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -696,7 +665,6 @@ export class APIService {
       `subscription OnCreateTimesheet {
         onCreateTimesheet {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -717,7 +685,6 @@ export class APIService {
       `subscription OnUpdateTimesheet {
         onUpdateTimesheet {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -738,7 +705,6 @@ export class APIService {
       `subscription OnDeleteTimesheet {
         onDeleteTimesheet {
           __typename
-          id
           employeeID
           firstName
           clockIn
@@ -759,7 +725,6 @@ export class APIService {
       `subscription OnCreateEmployee {
         onCreateEmployee {
           __typename
-          id
           employeeID
           firstName
           lastName
@@ -782,7 +747,6 @@ export class APIService {
       `subscription OnUpdateEmployee {
         onUpdateEmployee {
           __typename
-          id
           employeeID
           firstName
           lastName
@@ -805,7 +769,6 @@ export class APIService {
       `subscription OnDeleteEmployee {
         onDeleteEmployee {
           __typename
-          id
           employeeID
           firstName
           lastName
