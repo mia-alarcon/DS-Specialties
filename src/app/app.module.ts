@@ -18,6 +18,7 @@ import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { APIService } from './API.service';
+import { TimestampComponent } from './timestamp/timestamp.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { APIService } from './API.service';
     PayrollComponent,
     ToolbarComponent,
     AddEmployeeComponent,
-    DbtestComponent
+    DbtestComponent,
+    TimestampComponent
   ],
   imports: [
     BrowserModule,
