@@ -2,6 +2,14 @@
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
+type Timesheet @model {
+  id: ID!
+  employeeID: String!
+  firstName: String!
+  clockIn: AWSTime
+  clockOut: AWSTime
+}
+
 type Employee @model {
   id: ID!
   employeeID: String!
@@ -11,3 +19,5 @@ type Employee @model {
   address: String!
   email: String!
 }
+
+
