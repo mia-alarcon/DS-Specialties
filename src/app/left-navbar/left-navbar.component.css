@@ -22,10 +22,6 @@ button {
   outline: none;
 }
 
-.signOut .p {
-  font-size: 100pt;
-}
-
 button:hover {
   background-color: #495ea2;
   color: white;
