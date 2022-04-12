@@ -1,5 +1,4 @@
-<body>
-<div class="left-navbar">
+<nav class="left-navbar">
   <button routerLink="payroll" class="nav-button">
     <i class="bi bi-cash-coin"></i>
     <h2>PAYROLL</h2>
@@ -15,17 +14,13 @@
     <h2>PROFILES</h2>
   </button>
 
-  <button class="nav-button">
-    <i class="bi bi-power"></i>
-    <amplify-authenticator>
+  <amplify-authenticator>
       <ng-template
         amplifySlot="authenticated"
         let-user="user"
         let-signOut="signOut"
       >
-        <button (click)="signOut()">SIGN OUT</button>
+        <button (click)="signOut()"> <i class="bi bi-power"><h2>SIGN OUT</h2></i></button>
       </ng-template>
-    </amplify-authenticator>
-  </button>
-</div>
-</body>
+  </amplify-authenticator>
+</nav>
