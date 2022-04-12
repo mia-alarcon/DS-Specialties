@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { APIService } from './API.service';
 import { TimestampComponent } from './timestamp/timestamp.component';
 import { UpdateEmployeeComponent } from './profiles/update-employee/update-employee.component';
+import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-employee.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UpdateEmployeeComponent } from './profiles/update-employee/update-emplo
     AddEmployeeComponent,
     DbtestComponent,
     TimestampComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    DeleteEmployeeComponent
   ],
   imports: [
     BrowserModule,

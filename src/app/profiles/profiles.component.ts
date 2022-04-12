@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService, Employee } from 'src/app/API.service';
 import { Subscription } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
 
@@ -24,13 +25,6 @@ export class ProfilesComponent implements OnInit {
       this.employees = event.items as Employee[];
       console.log(this.employees);
     });
-
-    this.subscription = <Subscription>(
-      this.api.OnCreateEmployeeListener.subscribe((event: any) => {
-        const newEmployee =  event.value.data.onCreateEmployee;
-        this.employees = [newEmployee, ...this.employees];
-      })
-    );
   }
 
   hasRoute(route: string) {

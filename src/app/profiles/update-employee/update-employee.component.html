@@ -2,7 +2,7 @@
   <h2>Update Employee Details</h2>
 
   <form
-    autocomplete="off"
+    autocomplete="on"
     [formGroup]="createForm"
     (ngSubmit)="onUpdate(createForm.value)"
   >
@@ -10,9 +10,9 @@
       <div class="form-group col-md-2">
         <label>Employee ID</label>
         <input
-          type="email"
+          type="text"
           formControlName="employeeID"
-          autocomplete="off"
+          autocomplete="on"
           class="form-control"
         />
       </div>
@@ -72,4 +72,13 @@
       <button type="button" class="btn btn-danger">Cancel</button>
     </div>
   </form>
+</div>
+
+<div *ngFor="let employee of employees">
+  <div>{{ employee.employeeID }}</div>
+  <div>{{ employee.firstName }}</div>
+  <div>{{ employee.lastName }}</div>
+  <div>{{ employee.phoneNum }}</div>
+  <div>{{ employee.address }}</div>
+  <div>{{ employee.email }}</div>
 </div>
