@@ -1,4 +1,47 @@
-<div class="container-fluid">
+
+<amplify-authenticator>
+  <ng-template
+    amplifySlot="authenticated"
+    let-signOut="signOut"
+  >
+    <body><div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <app-header></app-header>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-2 left-nav nopadding">
+          <app-left-navbar></app-left-navbar>
+        </div>
+        <div class="col-md-10 nopadding">
+          <div class="toolbar">
+            <app-toolbar></app-toolbar>
+            <div class="main-container">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></body>
+  </ng-template>
+</amplify-authenticator>
+
+
+<!--<amplify-authenticator>
+  <ng-template
+    amplifySlot="authenticated"
+    let-user="user"
+    let-signOut="signOut"
+  >
+    <h1>Welcome {{ user.username }}!</h1>
+    <button (click)="signOut()">Sign Out</button>
+  </ng-template>
+</amplify-authenticator>-->
+
+
+<!--<div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
       <app-header></app-header>
@@ -18,7 +61,8 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
+
 
 <!-- <div class="col-md-10">
       <div class="toolbar">

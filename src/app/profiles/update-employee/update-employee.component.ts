@@ -14,8 +14,6 @@ export class UpdateEmployeeComponent implements OnInit {
   //TODO: I might change the name of this
   public createForm: FormGroup;
 
-
-  //you have employees< with an s when it should just be employee
   public employees: Array<Employee> = [];
 
   constructor(private api: APIService, private fb: FormBuilder) { 
@@ -32,7 +30,6 @@ export class UpdateEmployeeComponent implements OnInit {
   private subscription: Subscription | null = null;
 
   ngOnInit(): void {
-
     //you need pass id
     //this.onGetEmployee//(/*pass something here */);
   }
