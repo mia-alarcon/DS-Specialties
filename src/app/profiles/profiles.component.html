@@ -29,15 +29,19 @@
           <td>{{ employee.address }}</td>
 
           <td>
-            <i class="bi bi-pencil-fill" style="color: rgb(246, 212, 65)"></i>
-            <i
-              class="bi bi-trash-fill"
-              style="color: rgb(177, 43, 43); margin-left: 5px"
-            ></i>
+            <button routerLink="/profiles/update-employee">
+              <i class="bi bi-pencil-fill" style="color: rgb(246, 212, 65)"></i>
+            </button>
+            <button routerLink="/delete-employee" id="delete-employee">
+              <i
+                class="bi bi-trash-fill"
+                style="color: rgb(177, 43, 43); margin-left: 5px"
+              ></i>
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <button routerLink="/profiles/update-employee">test</button>
+  <!-- <button routerLink="/profiles/update-employee">test</button> -->
 </body>

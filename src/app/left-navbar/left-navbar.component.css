@@ -19,6 +19,7 @@ button {
   padding: 3rem 0;
 }
 
+.dsbutton:hover,
 button:hover {
   background-color: #495ea2;
   color: white;
