@@ -33,9 +33,11 @@ button {
   cursor: pointer;
   font-size: 15px;
 }
+
 button:hover {
   background-color: #80b5fcff;
 }
+
 i {
   margin-right: 10px;
 }

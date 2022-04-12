@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService, Employee } from 'src/app/API.service';
 import { Subscription } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profiles',
@@ -12,7 +15,7 @@ export class ProfilesComponent implements OnInit {
 
   public employees: Array<Employee> = [];
 
-  constructor(private api: APIService) { }
+  constructor(private api: APIService, private router: Router) { }
 
   private subscription: Subscription | null = null;
 
@@ -22,12 +25,9 @@ export class ProfilesComponent implements OnInit {
       this.employees = event.items as Employee[];
       console.log(this.employees);
     });
+  }
 
-    this.subscription = <Subscription>(
-      this.api.OnCreateEmployeeListener.subscribe((event: any) => {
-        const newEmployee =  event.value.data.onCreateEmployee;
-        this.employees = [newEmployee, ...this.employees];
-      })
-    );
+  hasRoute(route: string) {
+    return this.router.url.includes(route);
   }
 }

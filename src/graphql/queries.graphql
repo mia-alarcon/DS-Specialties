@@ -1,7 +1,6 @@
 # this is an auto generated file. This will be overwritten
-query GetTimesheet($id: ID!) {
-  getTimesheet(id: $id) {
-    id
+query GetTimesheet($employeeID: String!) {
+  getTimesheet(employeeID: $employeeID) {
     employeeID
     firstName
     clockIn
@@ -11,13 +10,20 @@ query GetTimesheet($id: ID!) {
   }
 }
 query ListTimesheets(
+  $employeeID: String
   $filter: ModelTimesheetFilterInput
   $limit: Int
   $nextToken: String
+  $sortDirection: ModelSortDirection
 ) {
-  listTimesheets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listTimesheets(
+    employeeID: $employeeID
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
     items {
-      id
       employeeID
       firstName
       clockIn
@@ -28,9 +34,8 @@ query ListTimesheets(
     nextToken
   }
 }
-query GetEmployee($id: ID!) {
-  getEmployee(id: $id) {
-    id
+query GetEmployee($employeeID: String!) {
+  getEmployee(employeeID: $employeeID) {
     employeeID
     firstName
     lastName
@@ -42,13 +47,20 @@ query GetEmployee($id: ID!) {
   }
 }
 query ListEmployees(
+  $employeeID: String
   $filter: ModelEmployeeFilterInput
   $limit: Int
   $nextToken: String
+  $sortDirection: ModelSortDirection
 ) {
-  listEmployees(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listEmployees(
+    employeeID: $employeeID
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
     items {
-      id
       employeeID
       firstName
       lastName
