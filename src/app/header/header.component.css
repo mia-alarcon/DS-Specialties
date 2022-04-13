@@ -9,13 +9,8 @@
 
 .company h1 {
   color: #152d7c;
-  font-weight: bold;
 }
-.tagline {
-  color: #68a4f6;
-  font-size: 17px;
-  font-weight: 300;
-}
+
 .user {
   color: #152d7c;
   display: flex;
