@@ -48,6 +48,11 @@ button:hover {
 
 i {
   margin-right: 10px;
+  margin-left: 10px;
+}
+
+#view-title {
+  text-decoration-line: underline;
 }
 /* button {
   background-color: inherit;
