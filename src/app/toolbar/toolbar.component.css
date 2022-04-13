@@ -19,11 +19,6 @@ div span {
   font-size: 20px;
 }
 
-#date-selector {
-  background-color: #80b5fcff;
-  padding: 10px;
-}
-
 button {
   background-color: inherit;
   border: none;
@@ -38,6 +33,11 @@ button:hover {
 }
 i {
   margin-right: 10px;
+  margin-left: 10px;
+}
+
+#view-title {
+  text-decoration-line: underline;
 }
 /* button {
   background-color: inherit;
