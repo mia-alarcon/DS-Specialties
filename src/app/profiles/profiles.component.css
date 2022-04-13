@@ -1,25 +1,25 @@
-    body {
-        height: 100%;
-    }
+body {
+  height: 100%;
+}
 
-    button {
-    background: none;
-    color: inherit;
-    border: none;
-    }
+button {
+  background: none;
+  color: inherit;
+  border: none;
+}
 
-    .profile-header {
-    background-color: #93c1fe;
-    color: white;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .employee-profile {
-        background-color: #f5fafd;
-      }
-      
-
- 
-    
+.profile-header {
+  background-color: #93c1fe;
+  color: white;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.employee-profile {
+  background-color: #f5fafd;
+  padding: 10px;
+}
+.buttons {
+  padding: 10px;
+}
