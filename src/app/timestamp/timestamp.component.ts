@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { APIService, Timesheet } from '../API.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { Auth } from 'aws-amplify';
+import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-timestamp',
@@ -23,22 +25,7 @@ export class TimestampComponent implements OnInit {
     });
   }
 
-  private subscription: Subscription | null = null;
-
-  async ngOnInit() {
-    this.subscription = <Subscription>(
-      this.api.OnCreateTimesheetListener.subscribe((event: any) => {
-        const newTimesheet =  event.value.data.onCreateEmployee;
-        this.timesheets = [newTimesheet, ...this.timesheets];
-      })
-    );
-  }
-
-  ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
-    this.subscription = null;
+  ngOnInit() {
   }
 
   public onCreate(timesheet: Timesheet) {

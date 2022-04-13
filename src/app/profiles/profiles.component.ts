@@ -30,4 +30,15 @@ export class ProfilesComponent implements OnInit {
   hasRoute(route: string) {
     return this.router.url.includes(route);
   }
+
+  clickedEmployee: any;
+  isVisible: boolean = true; 
+
+  onClick(employee){
+    this.clickedEmployee = employee;
+    this.isVisible = false;
+    this.router.navigate(['/update-employee', employee.employeeID])
+    console.log(this.clickedEmployee)
+  }
+   
 }

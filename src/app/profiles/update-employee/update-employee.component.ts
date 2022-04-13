@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { APIService, Employee } from 'src/app/API.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-update-employee',
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })
+
 export class UpdateEmployeeComponent implements OnInit {
   title = 'amplify-angular-app';
 
@@ -16,7 +18,7 @@ export class UpdateEmployeeComponent implements OnInit {
 
   public employees: Array<Employee> = [];
 
-  constructor(private api: APIService, private fb: FormBuilder) { 
+  constructor(private api: APIService, private fb: FormBuilder, private route: ActivatedRoute) { 
     this.createForm = this.fb.group({
       employeeID: ['', Validators.required],
       firstName: ['', Validators.required],
@@ -29,9 +31,20 @@ export class UpdateEmployeeComponent implements OnInit {
 
   private subscription: Subscription | null = null;
 
-  ngOnInit(): void {
+  employee: any;
+
+  ngOnInit(){
+    this.route.paramMap.subscribe(parameterMap => {
+      const employeeID = parameterMap.get('employeeID');
+      console.log(this.getEmployee(employeeID))
+      console.log(employeeID)
+    });
     //you need pass id
     //this.onGetEmployee//(/*pass something here */);
+  }
+
+  private getEmployee(employeeID: string) {
+      console.log(this.employee = this.api.GetEmployee(employeeID));
   }
   /*
   * 1. pass the employee id ( you can do this by giving it though the url () or if there is something with angular that you know where you can pass it to the controller)
@@ -50,6 +63,8 @@ export class UpdateEmployeeComponent implements OnInit {
         console.log('error updating employee...', e)
       });
   }
+
+  
 
   //why would you get the employee if you are pass the whole thing
   /*public onGetEmployee(employee: Employee) {

@@ -1,9 +1,9 @@
 <div class="toolbar">
-  <div *ngIf="hasRoute('timesheet')">
-    <span class="fw-bold" id="date-selector">poop View</span>
+  <div *ngIf="hasRoute('timesheet')" class="single">
+    <span class="fw-bold" id="date-selector">Weekly View</span>
   </div>
 
-  <div *ngIf="hasRoute('payroll')">
+  <div *ngIf="hasRoute('payroll')" class="single">
     <span class="fw-bold payroll">Payroll View</span>
   </div>
 
@@ -13,14 +13,21 @@
     </button>
     <span class="fw-bold">Employee Profiles View</span>
     <button routerLink="delete-employee" id="delete-employee">
-      <i class="bi bi-plus"></i>Delete Employee
+      <i class="bi bi-trash3"></i>Delete Employee
     </button>
   </div>
 
-  <div *ngIf="hasRoute('add-employee')">
+  <div *ngIf="hasRoute('add-employee')" class="two-items">
     <button routerLink="profiles" id="profiles">
       <i class="bi bi-arrow-return-left"></i>Return to Profiles
     </button>
     <span>Add Employee Form</span>
+  </div>
+
+  <div *ngIf="hasRoute('delete-employee')" class="two-items">
+    <button routerLink="profiles" id="profiles">
+      <i class="bi bi-arrow-return-left"></i>Return to Profiles
+    </button>
+    <span>Delete Employee</span>
   </div>
 </div>
