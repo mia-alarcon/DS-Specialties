@@ -1,0 +1,24 @@
+<h1>Employee Clock-In</h1>
+    <h4>Please enter your D&S ID.</h4>
+    <hr /><br />
+
+<form
+    autocomplete="off"
+      [formGroup]="createForm"
+      (ngSubmit)="onCreate(createForm.value)" 
+    >
+    <label id="icon" for="name"><i class="fas fa-user"></i></label>
+    <input type="text" formControlName="firstName" name="name" id="name" placeholder="Select Name" required/>
+    <label id="icon" for="name"><i class="fas fa-key"></i></label>
+    <input type="password" formControlName="employeeID"  name="name" id="name" placeholder="Employee ID" required/>
+    <div class="clock">
+        <div><label id="icon" for="name">Clock-In</label>
+            <input type="time" formControlName="clockIn" name="clockin" id="clockin" placeholder="Select Clock-In Time" required/></div> 
+        <div><label id="icon" for="name">Clock-Out</label>
+            <input type="time" formControlName="clockOut" name="clockout" id="clockout" placeholder="Select Clock-Out Time" required/></div>
+    </div>
+    <br /><br/>
+    <button type="submit" id="next" routerLink="form/submission" routerLinkActive="active">SUBMIT</button>
+
+</form>
+          

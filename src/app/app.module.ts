@@ -5,9 +5,13 @@ import { AppComponent } from './app.component';
 import { LeftNavbarComponent } from './left-navbar/left-navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
+import { FormComponent } from './form/form.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './form/login/login.component';
+import { SubmissionComponent } from './form/submission/submission.component';
+
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AddEmployeeComponent } from './profiles/add-employee/add-employee.component';
 
@@ -35,7 +39,13 @@ import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-emplo
     DbtestComponent,
     TimestampComponent,
     UpdateEmployeeComponent,
+<<<<<<< HEAD
     DeleteEmployeeComponent
+=======
+    FormComponent,
+    LoginComponent,
+    SubmissionComponent
+>>>>>>> origin/final3
   ],
   imports: [
     BrowserModule,

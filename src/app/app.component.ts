@@ -10,6 +10,10 @@ import awsExports from '../aws-exports'
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+<<<<<<< HEAD
   constructor() {}
+=======
+  
+>>>>>>> origin/final3
 }
 

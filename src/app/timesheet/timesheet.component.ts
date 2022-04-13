@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService, Timesheet } from 'src/app/API.service';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-timesheet',
@@ -6,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timesheet.component.css']
 })
 export class TimesheetComponent implements OnInit {
+
+  public timesheets: Array<Timesheet> = [];
 
   public dataList: Array<IEmployee> = [
     {
@@ -33,9 +39,16 @@ export class TimesheetComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private api: APIService, private router: Router) { }
+
+  private subscription: Subscription | null = null;
 
   ngOnInit(): void {
+    /* fetch employees when the app loads */
+    this.api.ListTimesheets().then((event) => {
+      this.timesheets = event.items as Timesheet[];
+      console.log(this.timesheets);
+    });
   }
 
 }
