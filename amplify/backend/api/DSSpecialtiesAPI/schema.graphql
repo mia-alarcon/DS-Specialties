@@ -5,6 +5,7 @@ input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONL
 type Timesheet @model {
   employeeID: String! @primaryKey
   firstName: String!
+  lastName: String!
   clockIn: AWSTime
   clockOut: AWSTime
 }

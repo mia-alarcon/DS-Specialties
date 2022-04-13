@@ -6,6 +6,7 @@ mutation CreateTimesheet(
   createTimesheet(input: $input, condition: $condition) {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt
@@ -19,6 +20,7 @@ mutation UpdateTimesheet(
   updateTimesheet(input: $input, condition: $condition) {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt
@@ -32,6 +34,7 @@ mutation DeleteTimesheet(
   deleteTimesheet(input: $input, condition: $condition) {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt

@@ -3,6 +3,7 @@ query GetTimesheet($employeeID: String!) {
   getTimesheet(employeeID: $employeeID) {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt
@@ -26,6 +27,7 @@ query ListTimesheets(
     items {
       employeeID
       firstName
+      lastName
       clockIn
       clockOut
       createdAt

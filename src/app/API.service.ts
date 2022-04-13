@@ -21,12 +21,14 @@ export type __SubscriptionContainer = {
 export type CreateTimesheetInput = {
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
 };
 
 export type ModelTimesheetConditionInput = {
   firstName?: ModelStringInput | null;
+  lastName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
   and?: Array<ModelTimesheetConditionInput | null> | null;
@@ -77,6 +79,7 @@ export type Timesheet = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -86,6 +89,7 @@ export type Timesheet = {
 export type UpdateTimesheetInput = {
   employeeID: string;
   firstName?: string | null;
+  lastName?: string | null;
   clockIn?: string | null;
   clockOut?: string | null;
 };
@@ -142,6 +146,7 @@ export type DeleteEmployeeInput = {
 export type ModelTimesheetFilterInput = {
   employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
+  lastName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
   and?: Array<ModelTimesheetFilterInput | null> | null;
@@ -182,6 +187,7 @@ export type CreateTimesheetMutation = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -192,6 +198,7 @@ export type UpdateTimesheetMutation = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -202,6 +209,7 @@ export type DeleteTimesheetMutation = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -248,6 +256,7 @@ export type GetTimesheetQuery = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -260,6 +269,7 @@ export type ListTimesheetsQuery = {
     __typename: "Timesheet";
     employeeID: string;
     firstName: string;
+    lastName: string;
     clockIn?: string | null;
     clockOut?: string | null;
     createdAt: string;
@@ -300,6 +310,7 @@ export type OnCreateTimesheetSubscription = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -310,6 +321,7 @@ export type OnUpdateTimesheetSubscription = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -320,6 +332,7 @@ export type OnDeleteTimesheetSubscription = {
   __typename: "Timesheet";
   employeeID: string;
   firstName: string;
+  lastName: string;
   clockIn?: string | null;
   clockOut?: string | null;
   createdAt: string;
@@ -375,6 +388,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt
@@ -401,6 +415,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt
@@ -427,6 +442,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt
@@ -534,6 +550,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt
@@ -562,6 +579,7 @@ export class APIService {
             __typename
             employeeID
             firstName
+            lastName
             clockIn
             clockOut
             createdAt
@@ -667,6 +685,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt
@@ -687,6 +706,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt
@@ -707,6 +727,7 @@ export class APIService {
           __typename
           employeeID
           firstName
+          lastName
           clockIn
           clockOut
           createdAt

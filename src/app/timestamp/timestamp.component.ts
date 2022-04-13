@@ -20,6 +20,7 @@ export class TimestampComponent implements OnInit {
     this.createForm = this.fb.group({
       employeeID: ['', Validators.required],
       firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       clockIn: ['', Validators.required],
       clockOut: ['', Validators.required]
     });

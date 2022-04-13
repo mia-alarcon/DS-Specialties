@@ -3,6 +3,7 @@ subscription OnCreateTimesheet {
   onCreateTimesheet {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt
@@ -13,6 +14,7 @@ subscription OnUpdateTimesheet {
   onUpdateTimesheet {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt
@@ -23,6 +25,7 @@ subscription OnDeleteTimesheet {
   onDeleteTimesheet {
     employeeID
     firstName
+    lastName
     clockIn
     clockOut
     createdAt
