@@ -21,7 +21,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let employee of employees">
-          <th scope="row"><button (click)="onClick(this.employee)">{{ employee.employeeID }}</button></th>
+          <th scope="row">{{ employee.employeeID }}</th>
           <td>{{ employee.firstName }}</td>
           <td>{{ employee.lastName }}</td>
           <td>{{ employee.phoneNum }}</td>
@@ -29,10 +29,10 @@
           <td>{{ employee.address }}</td>
 
           <td>
-            <button routerLink="/profiles/update-employee">
+            <button (click)="onClick(this.employee)" routerLink="/profiles/update-employee" id="update-employee">
               <i class="bi bi-pencil-fill" style="color: rgb(246, 212, 65)"></i>
             </button>
-            <button routerLink="/delete-employee" id="delete-employee">
+            <button (click)="onDelete(this.employee)" routerLink="/delete-employee" id="delete-employee">
               <i
                 class="bi bi-trash-fill"
                 style="color: rgb(177, 43, 43); margin-left: 5px"
@@ -45,6 +45,3 @@
   </div>
   <!-- <button routerLink="/profiles/update-employee">test</button> -->
 </body>
-<div *ngIf="isVisible === false">
-  <app-update-employee></app-update-employee>
-</div>
