@@ -21,6 +21,9 @@ import { APIService } from './API.service';
 import { TimestampComponent } from './timestamp/timestamp.component';
 import { UpdateEmployeeComponent } from './profiles/update-employee/update-employee.component';
 import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-employee.component';
+import { LoginComponent } from './form/login/login.component';
+import { FormComponent } from './form/form.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,11 @@ import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-emplo
     DbtestComponent,
     TimestampComponent,
     UpdateEmployeeComponent,
-    DeleteEmployeeComponent
+    DeleteEmployeeComponent,
+    LoginComponent,
+    FormComponent
+    
+    
   ],
   imports: [
     BrowserModule,
