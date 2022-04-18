@@ -23,12 +23,14 @@ export type CreateTimesheetInput = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
 };
 
 export type ModelTimesheetConditionInput = {
   firstName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
+  day?: ModelStringInput | null;
   and?: Array<ModelTimesheetConditionInput | null> | null;
   or?: Array<ModelTimesheetConditionInput | null> | null;
   not?: ModelTimesheetConditionInput | null;
@@ -79,6 +81,7 @@ export type Timesheet = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -88,6 +91,7 @@ export type UpdateTimesheetInput = {
   firstName?: string | null;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
 };
 
 export type DeleteTimesheetInput = {
@@ -144,6 +148,7 @@ export type ModelTimesheetFilterInput = {
   firstName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
+  day?: ModelStringInput | null;
   and?: Array<ModelTimesheetFilterInput | null> | null;
   or?: Array<ModelTimesheetFilterInput | null> | null;
   not?: ModelTimesheetFilterInput | null;
@@ -184,6 +189,7 @@ export type CreateTimesheetMutation = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -194,6 +200,7 @@ export type UpdateTimesheetMutation = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -204,6 +211,7 @@ export type DeleteTimesheetMutation = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -250,6 +258,7 @@ export type GetTimesheetQuery = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -262,6 +271,7 @@ export type ListTimesheetsQuery = {
     firstName: string;
     clockIn?: string | null;
     clockOut?: string | null;
+    day?: string | null;
     createdAt: string;
     updatedAt: string;
   } | null>;
@@ -302,6 +312,7 @@ export type OnCreateTimesheetSubscription = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -312,6 +323,7 @@ export type OnUpdateTimesheetSubscription = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -322,6 +334,7 @@ export type OnDeleteTimesheetSubscription = {
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  day?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -377,6 +390,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }
@@ -403,6 +417,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }
@@ -429,6 +444,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }
@@ -536,6 +552,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }
@@ -564,6 +581,7 @@ export class APIService {
             firstName
             clockIn
             clockOut
+            day
             createdAt
             updatedAt
           }
@@ -669,6 +687,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }
@@ -689,6 +708,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }
@@ -709,6 +729,7 @@ export class APIService {
           firstName
           clockIn
           clockOut
+          day
           createdAt
           updatedAt
         }

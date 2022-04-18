@@ -23,6 +23,7 @@ import { UpdateEmployeeComponent } from './profiles/update-employee/update-emplo
 import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-employee.component';
 import { LoginComponent } from './form/login/login.component';
 import { FormComponent } from './form/form.component';
+import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { FormComponent } from './form/form.component';
     UpdateEmployeeComponent,
     DeleteEmployeeComponent,
     LoginComponent,
-    FormComponent
+    FormComponent,
+    DailyViewComponent
     
     
   ],

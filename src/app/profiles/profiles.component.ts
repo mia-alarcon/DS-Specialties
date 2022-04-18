@@ -26,8 +26,8 @@ export class ProfilesComponent implements OnInit {
       console.log(this.employees);
     });
     
-  }
-
+  };
+  
   hasRoute(route: string) {
     return this.router.url.includes(route);
   }
@@ -48,7 +48,7 @@ export class ProfilesComponent implements OnInit {
 
   onDelete(employee){
     this.clickedEmployee = employee;
-    this.employee.employeeID = employee.employeeID;
+    this.employee.employeeID = employee.emloyeeID
     this.router.navigate(['/delete-employee', employee.employeeID])
   }
    

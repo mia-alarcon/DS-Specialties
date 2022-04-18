@@ -8,6 +8,7 @@ mutation CreateTimesheet(
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }
@@ -21,6 +22,7 @@ mutation UpdateTimesheet(
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }
@@ -34,6 +36,7 @@ mutation DeleteTimesheet(
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }

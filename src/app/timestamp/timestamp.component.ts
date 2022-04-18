@@ -40,7 +40,7 @@ export class TimestampComponent implements OnInit {
       });
   }
 
-  public onUpdate(timesheet: Timesheet) {
+  /*public onUpdate(timesheet: Timesheet) {
     this.api
       .UpdateTimesheet(timesheet)
       .then((event) => {
@@ -50,7 +50,8 @@ export class TimestampComponent implements OnInit {
       .catch((e) => {
         console.log('error updating timestamp...', e)
       });
-  }
+  }*/
+
 
 
 }

@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+        <!-- To Do: make columns iterate over days in week-->
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Clock-In</th>
+        <th scope="col">Clock-Out</th>
+        <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let timesheet of timesheets">
+          <th scope="row">{{ timesheet.employeeID }}</th>
+          <td>{{ timesheet.firstName }}</td>
+          <td>{{ timesheet.clockIn }}</td>
+          <td>{{ timesheet.clockOut }}</td>
+        </tr>
+      </tbody>
+</table>

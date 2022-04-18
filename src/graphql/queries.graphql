@@ -5,6 +5,7 @@ query GetTimesheet($employeeID: String!) {
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }
@@ -28,6 +29,7 @@ query ListTimesheets(
       firstName
       clockIn
       clockOut
+      day
       createdAt
       updatedAt
     }

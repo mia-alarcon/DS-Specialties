@@ -5,6 +5,7 @@ subscription OnCreateTimesheet {
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }
@@ -15,6 +16,7 @@ subscription OnUpdateTimesheet {
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }
@@ -25,6 +27,7 @@ subscription OnDeleteTimesheet {
     firstName
     clockIn
     clockOut
+    day
     createdAt
     updatedAt
   }
