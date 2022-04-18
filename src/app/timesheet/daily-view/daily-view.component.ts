@@ -18,8 +18,7 @@ export class DailyViewComponent implements OnInit {
   myDate: string;
 
   constructor(private api: APIService, private datePipe: DatePipe) { 
-    // this.myDate = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
-    this.myDate = Date();
+    
   }
 
   async ngOnInit() {
@@ -28,10 +27,15 @@ export class DailyViewComponent implements OnInit {
       this.timesheets = event.items as Timesheet[];
 
       // fetches the filtered timesheet data by date
-      this.timesheets = this.timesheets.filter(timesheet => timesheet.day == '2022-04-15');
+      this.timesheets = this.timesheets.filter(timesheet => timesheet.day == this.myDate);
       console.log(this.timesheets); 
     });
     
+    this.myDate = this.datePipe.transform(Date(), 'yyyy-MM-dd');
+
+    // console.log(this.datePipe.transform(Date(), 'yyyy-MM-dd'));
     console.log(this.myDate);
   };
+
+
 }
