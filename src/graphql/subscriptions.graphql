@@ -1,33 +1,36 @@
 # this is an auto generated file. This will be overwritten
 subscription OnCreateTimesheet {
   onCreateTimesheet {
+    id
     employeeID
     firstName
     clockIn
     clockOut
-    day
+    date
     createdAt
     updatedAt
   }
 }
 subscription OnUpdateTimesheet {
   onUpdateTimesheet {
+    id
     employeeID
     firstName
     clockIn
     clockOut
-    day
+    date
     createdAt
     updatedAt
   }
 }
 subscription OnDeleteTimesheet {
   onDeleteTimesheet {
+    id
     employeeID
     firstName
     clockIn
     clockOut
-    day
+    date
     createdAt
     updatedAt
   }

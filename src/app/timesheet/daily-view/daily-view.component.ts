@@ -27,13 +27,11 @@ export class DailyViewComponent implements OnInit {
       this.timesheets = event.items as Timesheet[];
 
       // fetches the filtered timesheet data by date
-      this.timesheets = this.timesheets.filter(timesheet => timesheet.day == this.myDate);
+      this.timesheets = this.timesheets.filter(timesheet => timesheet.date == this.myDate);
       console.log(this.timesheets); 
     });
     
     this.myDate = this.datePipe.transform(Date(), 'yyyy-MM-dd');
-
-    // console.log(this.datePipe.transform(Date(), 'yyyy-MM-dd'));
     console.log(this.myDate);
   };
 
