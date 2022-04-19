@@ -4,8 +4,11 @@ import { PayrollComponent } from './payroll/payroll.component';
 import { AddEmployeeComponent } from './profiles/add-employee/add-employee.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
+import { FormComponent } from './form/form.component';
 import { UpdateEmployeeComponent } from './profiles/update-employee/update-employee.component';
 import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-employee.component';
+import { SubmissionComponent } from './form/submission/submission.component';
+import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
 
 const routes: Routes = [
   { path: 'payroll', component: PayrollComponent },
@@ -14,7 +17,14 @@ const routes: Routes = [
   { path: 'add-employee', component: AddEmployeeComponent },
   { path: 'profiles/update-employee', component: UpdateEmployeeComponent },
   { path: 'delete-employee', component: DeleteEmployeeComponent },
-  { path: 'update-employee/:employeeID', component: UpdateEmployeeComponent }
+  { path: 'update-employee/:employeeID', component: UpdateEmployeeComponent },
+  { path: 'delete-employee/:employeeID', component: DeleteEmployeeComponent },
+  { path: 'update-employee/:employeeID', component: UpdateEmployeeComponent },
+  { path: 'profiles/update-employee', component: UpdateEmployeeComponent},
+  { path: 'form/submission', component: FormComponent},
+  { path: '', component: FormComponent },
+  { path: 'timesheet/daily-view', component: DailyViewComponent }
+
 ];
 
 @NgModule({

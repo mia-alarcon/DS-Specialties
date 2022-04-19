@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService, Employee } from 'src/app/API.service';
+import { SelectedEmployeeService } from '../selected-employee.service';
 import { Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
+import { AnyTxtRecord } from 'dns';
 
 @Component({
   selector: 'app-profiles',
@@ -15,9 +17,7 @@ export class ProfilesComponent implements OnInit {
 
   public employees: Array<Employee> = [];
 
-  constructor(private api: APIService, private router: Router) { }
-
-  private subscription: Subscription | null = null;
+  constructor(private api: APIService, private employee: SelectedEmployeeService, private router: Router) { }
 
   async ngOnInit() {
     /* fetch employees when the app loads */
@@ -25,8 +25,9 @@ export class ProfilesComponent implements OnInit {
       this.employees = event.items as Employee[];
       console.log(this.employees);
     });
-  }
-
+    
+  };
+  
   hasRoute(route: string) {
     return this.router.url.includes(route);
   }
@@ -36,9 +37,19 @@ export class ProfilesComponent implements OnInit {
 
   onClick(employee){
     this.clickedEmployee = employee;
-    this.isVisible = false;
+    this.employee.employeeID = employee.employeeID;
+    this.employee.firstName = employee.firstName;
+    this.employee.lastName = employee.lastName;
+    this.employee.phoneNum = employee.phoneNum;
+    this.employee.email = employee.email;
+    this.employee.address = employee.address;
     this.router.navigate(['/update-employee', employee.employeeID])
-    console.log(this.clickedEmployee)
+  }
+
+  onDelete(employee){
+    this.clickedEmployee = employee;
+    this.employee.employeeID = employee.emloyeeID
+    this.router.navigate(['/delete-employee', employee.employeeID])
   }
    
 }

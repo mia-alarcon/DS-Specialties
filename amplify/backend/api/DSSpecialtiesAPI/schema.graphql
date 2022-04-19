@@ -8,6 +8,7 @@ type Timesheet @model {
   lastName: String!
   clockIn: AWSTime
   clockOut: AWSTime
+  day: AWSDate
 }
 
 type Employee @model {

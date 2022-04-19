@@ -3,6 +3,7 @@ import { APIService, Employee } from 'src/app/API.service';
 import { Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SelectedEmployeeService } from 'src/app/selected-employee.service';
 
 @Component({
   selector: 'app-delete-employee',
@@ -15,9 +16,13 @@ export class DeleteEmployeeComponent implements OnInit {
 
   public employees: Array<Employee> = [];
 
-  constructor(private api: APIService, private fb: FormBuilder, private router: Router) { 
+  get employeeID(): string {
+    return this.employee.employeeID
+  }
+
+  constructor(private api: APIService, private employee: SelectedEmployeeService, private fb: FormBuilder, private router: Router) { 
     this.createForm =  this.fb.group({
-      employeeID: ['', Validators.required],
+      employeeID: [employee.employeeID, Validators.required],
     });
   }
 

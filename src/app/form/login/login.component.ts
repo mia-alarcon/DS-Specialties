@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { APIService, Timesheet } from '../API.service';
+
+import { APIService, Timesheet } from '../../API.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { Auth } from 'aws-amplify';
-import { runInThisContext } from 'vm';
 
 @Component({
-  selector: 'app-timestamp',
-  templateUrl: './timestamp.component.html',
-  styleUrls: ['./timestamp.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class TimestampComponent implements OnInit {
+export class LoginComponent implements OnInit {
   title = 'amplify-angular-app';
   public createForm: FormGroup;
 
@@ -20,13 +19,27 @@ export class TimestampComponent implements OnInit {
     this.createForm = this.fb.group({
       employeeID: ['', Validators.required],
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
       clockIn: ['', Validators.required],
       clockOut: ['', Validators.required]
     });
   }
 
-  ngOnInit() {
+  private subscription: Subscription | null = null;
+
+  async ngOnInit() {
+    this.subscription = <Subscription>(
+      this.api.OnCreateTimesheetListener.subscribe((event: any) => {
+        const newTimesheet =  event.value.data.onCreateEmployee;
+        this.timesheets = [newTimesheet, ...this.timesheets];
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    this.subscription = null;
   }
 
   public onCreate(timesheet: Timesheet) {
@@ -41,7 +54,7 @@ export class TimestampComponent implements OnInit {
       });
   }
 
-  /*public onUpdate(timesheet: Timesheet) {
+  public onUpdate(timesheet: Timesheet) {
     this.api
       .UpdateTimesheet(timesheet)
       .then((event) => {
@@ -51,9 +64,9 @@ export class TimestampComponent implements OnInit {
       .catch((e) => {
         console.log('error updating timestamp...', e)
       });
-  }*/
-
+  }
 
 
 }
+
 
