@@ -24,6 +24,7 @@ import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-emplo
 import { LoginComponent } from './form/login/login.component';
 import { FormComponent } from './form/form.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
+import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { DailyViewComponent } from './timesheet/daily-view/daily-view.component'
     DeleteEmployeeComponent,
     LoginComponent,
     FormComponent,
-    DailyViewComponent
+    DailyViewComponent,
+    WeeklyViewComponent
     
     
   ],
