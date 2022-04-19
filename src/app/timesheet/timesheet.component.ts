@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { APIService, Employee, Timesheet } from 'src/app/API.service';
-import { Subscription } from 'rxjs';
+import { APIService, Timesheet } from 'src/app/API.service';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-timesheet',
@@ -42,7 +43,7 @@ export class TimesheetComponent implements OnInit {
 
   private subscription: Subscription | null = null;
 
-  async ngOnInit() {
+  ngOnInit(): void {
     /* fetch employees when the app loads */
     this.api.ListTimesheets().then((event) => {
       this.timesheets = event.items as Timesheet[];
