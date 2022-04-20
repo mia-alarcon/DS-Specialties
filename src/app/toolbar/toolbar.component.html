@@ -3,8 +3,7 @@
     <button id="view-title">
       Weekly View
     </button>
-    <span>Tuesday, 4/12/2022 <button><i class="bi bi-calendar3"></i></button></span> 
-    
+    <span>Tuesday, 4/12/2022 <input type="date" (change)="SendDataonChange($event)" autocomplete="off" /><input type="submit" (click)="setDate()"/></span> 
   </div>
 
   <div *ngIf="hasRoute('payroll')" class="single">

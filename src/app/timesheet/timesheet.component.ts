@@ -41,8 +41,6 @@ export class TimesheetComponent implements OnInit {
 
   constructor(private api: APIService, private router: Router) { }
 
-  private subscription: Subscription | null = null;
-
   ngOnInit(): void {
     /* fetch employees when the app loads */
     this.api.ListTimesheets().then((event) => {
