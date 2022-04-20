@@ -19,16 +19,20 @@ export type __SubscriptionContainer = {
 };
 
 export type CreateTimesheetInput = {
+  id?: string | null;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
 };
 
 export type ModelTimesheetConditionInput = {
+  employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
+  date?: ModelStringInput | null;
   and?: Array<ModelTimesheetConditionInput | null> | null;
   or?: Array<ModelTimesheetConditionInput | null> | null;
   not?: ModelTimesheetConditionInput | null;
@@ -75,23 +79,27 @@ export type ModelSizeInput = {
 
 export type Timesheet = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
 
 export type UpdateTimesheetInput = {
-  employeeID: string;
+  id: string;
+  employeeID?: string | null;
   firstName?: string | null;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
 };
 
 export type DeleteTimesheetInput = {
-  employeeID: string;
+  id: string;
 };
 
 export type CreateEmployeeInput = {
@@ -140,13 +148,31 @@ export type DeleteEmployeeInput = {
 };
 
 export type ModelTimesheetFilterInput = {
+  id?: ModelIDInput | null;
   employeeID?: ModelStringInput | null;
   firstName?: ModelStringInput | null;
   clockIn?: ModelStringInput | null;
   clockOut?: ModelStringInput | null;
+  date?: ModelStringInput | null;
   and?: Array<ModelTimesheetFilterInput | null> | null;
   or?: Array<ModelTimesheetFilterInput | null> | null;
   not?: ModelTimesheetFilterInput | null;
+};
+
+export type ModelIDInput = {
+  ne?: string | null;
+  eq?: string | null;
+  le?: string | null;
+  lt?: string | null;
+  ge?: string | null;
+  gt?: string | null;
+  contains?: string | null;
+  notContains?: string | null;
+  between?: Array<string | null> | null;
+  beginsWith?: string | null;
+  attributeExists?: boolean | null;
+  attributeType?: ModelAttributeTypes | null;
+  size?: ModelSizeInput | null;
 };
 
 export enum ModelSortDirection {
@@ -180,30 +206,36 @@ export type ModelEmployeeConnection = {
 
 export type CreateTimesheetMutation = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
 
 export type UpdateTimesheetMutation = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
 
 export type DeleteTimesheetMutation = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -246,10 +278,12 @@ export type DeleteEmployeeMutation = {
 
 export type GetTimesheetQuery = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -258,10 +292,12 @@ export type ListTimesheetsQuery = {
   __typename: "ModelTimesheetConnection";
   items: Array<{
     __typename: "Timesheet";
+    id: string;
     employeeID: string;
     firstName: string;
     clockIn?: string | null;
     clockOut?: string | null;
+    date?: string | null;
     createdAt: string;
     updatedAt: string;
   } | null>;
@@ -298,30 +334,36 @@ export type ListEmployeesQuery = {
 
 export type OnCreateTimesheetSubscription = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
 
 export type OnUpdateTimesheetSubscription = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
 
 export type OnDeleteTimesheetSubscription = {
   __typename: "Timesheet";
+  id: string;
   employeeID: string;
   firstName: string;
   clockIn?: string | null;
   clockOut?: string | null;
+  date?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -373,10 +415,12 @@ export class APIService {
     const statement = `mutation CreateTimesheet($input: CreateTimesheetInput!, $condition: ModelTimesheetConditionInput) {
         createTimesheet(input: $input, condition: $condition) {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }
@@ -399,10 +443,12 @@ export class APIService {
     const statement = `mutation UpdateTimesheet($input: UpdateTimesheetInput!, $condition: ModelTimesheetConditionInput) {
         updateTimesheet(input: $input, condition: $condition) {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }
@@ -425,10 +471,12 @@ export class APIService {
     const statement = `mutation DeleteTimesheet($input: DeleteTimesheetInput!, $condition: ModelTimesheetConditionInput) {
         deleteTimesheet(input: $input, condition: $condition) {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }
@@ -528,20 +576,22 @@ export class APIService {
     )) as any;
     return <DeleteEmployeeMutation>response.data.deleteEmployee;
   }
-  async GetTimesheet(employeeID: string): Promise<GetTimesheetQuery> {
-    const statement = `query GetTimesheet($employeeID: String!) {
-        getTimesheet(employeeID: $employeeID) {
+  async GetTimesheet(id: string): Promise<GetTimesheetQuery> {
+    const statement = `query GetTimesheet($id: ID!) {
+        getTimesheet(id: $id) {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }
       }`;
     const gqlAPIServiceArguments: any = {
-      employeeID
+      id
     };
     const response = (await API.graphql(
       graphqlOperation(statement, gqlAPIServiceArguments)
@@ -549,21 +599,23 @@ export class APIService {
     return <GetTimesheetQuery>response.data.getTimesheet;
   }
   async ListTimesheets(
-    employeeID?: string,
+    id?: string,
     filter?: ModelTimesheetFilterInput,
     limit?: number,
     nextToken?: string,
     sortDirection?: ModelSortDirection
   ): Promise<ListTimesheetsQuery> {
-    const statement = `query ListTimesheets($employeeID: String, $filter: ModelTimesheetFilterInput, $limit: Int, $nextToken: String, $sortDirection: ModelSortDirection) {
-        listTimesheets(employeeID: $employeeID, filter: $filter, limit: $limit, nextToken: $nextToken, sortDirection: $sortDirection) {
+    const statement = `query ListTimesheets($id: ID, $filter: ModelTimesheetFilterInput, $limit: Int, $nextToken: String, $sortDirection: ModelSortDirection) {
+        listTimesheets(id: $id, filter: $filter, limit: $limit, nextToken: $nextToken, sortDirection: $sortDirection) {
           __typename
           items {
             __typename
+            id
             employeeID
             firstName
             clockIn
             clockOut
+            date
             createdAt
             updatedAt
           }
@@ -571,8 +623,8 @@ export class APIService {
         }
       }`;
     const gqlAPIServiceArguments: any = {};
-    if (employeeID) {
-      gqlAPIServiceArguments.employeeID = employeeID;
+    if (id) {
+      gqlAPIServiceArguments.id = id;
     }
     if (filter) {
       gqlAPIServiceArguments.filter = filter;
@@ -665,10 +717,12 @@ export class APIService {
       `subscription OnCreateTimesheet {
         onCreateTimesheet {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }
@@ -685,10 +739,12 @@ export class APIService {
       `subscription OnUpdateTimesheet {
         onUpdateTimesheet {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }
@@ -705,10 +761,12 @@ export class APIService {
       `subscription OnDeleteTimesheet {
         onDeleteTimesheet {
           __typename
+          id
           employeeID
           firstName
           clockIn
           clockOut
+          date
           createdAt
           updatedAt
         }

@@ -1,16 +1,12 @@
 <div class="row asd">
-  <div class="col-md-6 company">
-    <h1>{{ title }}</h1>
+  <div class="col-md-6">
+    <h1 class="company">{{ title }}</h1>
     <h2 class="tagline">{{ tagline }}</h2>
   </div>
   <div class="col-md-6 user">
     <i class="bi bi-person-fill"></i
     ><amplify-authenticator>
-      <ng-template
-        amplifySlot="authenticated"
-        let-user="user"
-        let-signOut="signOut"
-      >
+      <ng-template amplifySlot="authenticated" let-user="user">
         <h2 class="text-capitalize welcome">Welcome {{ user.username }}!</h2>
       </ng-template>
     </amplify-authenticator>

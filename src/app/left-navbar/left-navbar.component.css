@@ -30,3 +30,48 @@ button:hover {
 h2 {
   font-size: 25px;
 }
+
+/* .left-navbar {
+  background-color: #152d7c;
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 30px;
+}
+
+button {
+  background-color: #152d7c;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 2rem 0;
+}
+
+button:hover {
+  background-color: #495ea2;
+  color: white;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 25px;
+} */

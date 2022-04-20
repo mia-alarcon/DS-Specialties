@@ -4,10 +4,12 @@ mutation CreateTimesheet(
   $condition: ModelTimesheetConditionInput
 ) {
   createTimesheet(input: $input, condition: $condition) {
+    id
     employeeID
     firstName
     clockIn
     clockOut
+    date
     createdAt
     updatedAt
   }
@@ -17,10 +19,12 @@ mutation UpdateTimesheet(
   $condition: ModelTimesheetConditionInput
 ) {
   updateTimesheet(input: $input, condition: $condition) {
+    id
     employeeID
     firstName
     clockIn
     clockOut
+    date
     createdAt
     updatedAt
   }
@@ -30,10 +34,12 @@ mutation DeleteTimesheet(
   $condition: ModelTimesheetConditionInput
 ) {
   deleteTimesheet(input: $input, condition: $condition) {
+    id
     employeeID
     firstName
     clockIn
     clockOut
+    date
     createdAt
     updatedAt
   }

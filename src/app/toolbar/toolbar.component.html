@@ -1,6 +1,9 @@
 <div class="toolbar">
-  <div *ngIf="hasRoute('timesheet')" class="single">
-    <span class="fw-bold" id="date-selector">Weekly View</span>
+  <div *ngIf="hasRoute('timesheet')">
+    <button id="view-title">Weekly View</button>
+    <span
+      >Tuesday, 4/12/2022 <button><i class="bi bi-calendar3"></i></button
+    ></span>
   </div>
 
   <div *ngIf="hasRoute('payroll')" class="single">

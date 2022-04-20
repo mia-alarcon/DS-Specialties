@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Auth } from 'aws-amplify';
 
 @Component({
   selector: 'app-header',
@@ -14,4 +15,10 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
 }
+
+Auth.currentAuthenticatedUser({
+  bypassCache: false
+}).then(user => console.log(user))
+.catch(err => console.log(err));

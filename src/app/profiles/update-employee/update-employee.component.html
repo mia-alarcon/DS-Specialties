@@ -1,6 +1,5 @@
 <div class="form">
   <h2>Update Employee Details</h2>
-
   <form
     autocomplete="on"
     [formGroup]="createForm"
@@ -21,8 +20,8 @@
         <input
           type="text"
           formControlName="firstName"
-          autocomplete="off"
-          class="form-control"
+          autocomplete="on"
+          class="form-control" 
         />
       </div>
       <div class="form-group col-md-4">
@@ -30,7 +29,7 @@
         <input
           type="text"
           formControlName="lastName"
-          autocomplete="off"
+          autocomplete="on"
           class="form-control"
         />
       </div>
@@ -40,7 +39,7 @@
           <input
             type="text"
             formControlName="phoneNum"
-            autocomplete="off"
+            autocomplete="on"
             class="form-control"
           />
         </div>
@@ -49,7 +48,7 @@
           <input
             type="text"
             formControlName="address"
-            autocomplete="off"
+            autocomplete="on"
             class="form-control"
           />
         </div>
@@ -60,13 +59,12 @@
           <input
             type="text"
             formControlName="email"
-            autocomplete="off"
+            autocomplete="on"
             class="form-control"
           />
         </div>
       </div>
     </div>
-
     <div class="buttons">
       <button type="submit" class="btn btn-primary">Update Details</button>
       <button type="button" class="btn btn-danger" routerLink="/profiles">
@@ -76,11 +74,3 @@
   </form>
 </div>
 
-<div *ngFor="let employee of employees">
-  <div>{{ employee.employeeID }}</div>
-  <div>{{ employee.firstName }}</div>
-  <div>{{ employee.lastName }}</div>
-  <div>{{ employee.phoneNum }}</div>
-  <div>{{ employee.address }}</div>
-  <div>{{ employee.email }}</div>
-</div>

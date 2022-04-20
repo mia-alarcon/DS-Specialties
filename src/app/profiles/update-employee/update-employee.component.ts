@@ -1,46 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { APIService, Employee } from 'src/app/API.service';
-import { Subscription } from 'rxjs';
+import { first, Subscription } from 'rxjs';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { input } from 'aws-amplify';
+import { SelectedEmployeeService } from 'src/app/selected-employee.service';
 
 @Component({
   selector: 'app-update-employee',
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })
+
 export class UpdateEmployeeComponent implements OnInit {
+
   title = 'amplify-angular-app';
 
   //TODO: I might change the name of this
   public createForm: FormGroup;
 
+  get employeeID(): string {
+    return this.employee.employeeID;
+  }
 
-  //you have employees< with an s when it should just be employee
-  public employees: Array<Employee> = [];
+  get firstName(): string {
+    return this.employee.firstName;
+  }
 
-  constructor(private api: APIService, private fb: FormBuilder) { 
+  get lastName(): string {
+    return this.employee.lastName;
+  }
+
+  get address(): string {
+    return this.employee.address;
+  }
+
+  get email(): string {
+    return this.employee.email;
+  }
+
+  get phoneNum(): string {
+    return this.employee.phoneNum;
+  }
+
+  constructor(private api: APIService, private employee: SelectedEmployeeService, private fb: FormBuilder, private route: ActivatedRoute) { 
     this.createForm = this.fb.group({
-      employeeID: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      address: ['', Validators.required],
-      email: ['', Validators.required],
-      phoneNum: ['', Validators.required]
+      employeeID: [this.employeeID, Validators.required],
+      firstName: [this.firstName, Validators.required],
+      lastName: [this.lastName, Validators.required],
+      address: [this.address, Validators.required],
+      email: [this.email, Validators.required],
+      phoneNum: [this.phoneNum, Validators.required]
     });
   }
 
-  private subscription: Subscription | null = null;
-
-  ngOnInit(): void {
-
-    //you need pass id
-    //this.onGetEmployee//(/*pass something here */);
-  }
-  /*
-  * 1. pass the employee id ( you can do this by giving it though the url () or if there is something with angular that you know where you can pass it to the controller)
-  * 2. have two way binding with the data (with the form), right now you have it so that you have your constructor so what you would need to do is once you get that onGetEmployee you will update every field that is listed with the data that you are getting 
-  * 3. preform the update as you where before
-  */
+  ngOnInit(){ }
 
   public onUpdate(employee: Employee) {
     this.api
@@ -53,23 +67,5 @@ export class UpdateEmployeeComponent implements OnInit {
         console.log('error updating employee...', e)
       });
   }
-
-  //why would you get the employee if you are pass the whole thing
-  /*public onGetEmployee(employee: Employee) {
-    this.api
-    //just use the id to get the employee
-      .GetEmployee(this.employees)
-      .then((event) => {
-        console.info(event)
-        console.info(this.createForm)
-        //this.createForm.address = 'main street' //this would be something like employee.address
-        //this is where you would want to fill the form 
-        console.log('employee fetched!');
-        this.createForm.reset();
-      })
-      .catch((e) => {
-        console.log('error fetching employee...', e)
-      });
-  }*/
 
 }

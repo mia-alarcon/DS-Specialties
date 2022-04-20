@@ -28,14 +28,22 @@
           <td>{{ employee.email }}</td>
           <td>{{ employee.address }}</td>
 
-          <td class="buttons">
-            <button routerLink="/profiles/update-employee">
+          <td>
+            <button
+              (click)="onClick(this.employee)"
+              routerLink="/profiles/update-employee"
+              id="update-employee"
+            >
               <i class="bi bi-pencil-fill" style="color: rgb(246, 212, 65)"></i>
             </button>
-            <button routerLink="/delete-employee" id="delete-employee">
+            <button
+              (click)="onDelete(this.employee)"
+              routerLink="/delete-employee"
+              id="delete-employee"
+            >
               <i
                 class="bi bi-trash-fill"
-                style="color: rgb(177, 43, 43); margin-left: 5px"
+                style="color: rgb(182, 55, 55); margin-left: 5px"
               ></i>
             </button>
           </td>
