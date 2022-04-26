@@ -11,6 +11,19 @@
   </div>
 
   <div *ngIf="hasRoute('payroll')" class="single">
+    <span>
+        Employee ID
+    <input
+        type="String"
+    />
+    <!--
+        (change)="SendDataonChange($event)" 
+        autocomplete="off" /><input type="submit" (click)="setEmployeeID()"
+      -->
+    </span>
+    <button routerLink="payroll-employee" id="payroll-employee">
+      Submit
+    </button>
     <span class="fw-bold payroll">Payroll View</span>
   </div>
 

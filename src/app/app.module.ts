@@ -26,6 +26,7 @@ import { LoginComponent } from './form/login/login.component';
 import { FormComponent } from './form/form.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
 import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.component';
+import { PayrollEmployeeComponent } from './payroll/payroll-employee/payroll-employee.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.compone
     LoginComponent,
     FormComponent,
     DailyViewComponent,
-    WeeklyViewComponent
+    WeeklyViewComponent,
+    PayrollEmployeeComponent,
     
     
   ],
