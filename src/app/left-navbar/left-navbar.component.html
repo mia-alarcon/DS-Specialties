@@ -14,14 +14,12 @@
     <h2>PROFILES</h2>
   </button>
 
-
   <amplify-authenticator>
-    <ng-template
-        amplifySlot="authenticated"
-        let-signOut="signOut"
-    >
-        <button (click)="signOut()"> <i class="bi bi-power"><h2>SIGN OUT</h2></i></button>
+    <ng-template amplifySlot="authenticated" let-signOut="signOut">
+      <button (click)="signOut()">
+        <i class="bi bi-power"></i>
+        <h2>SIGN OUT</h2>
+      </button>
     </ng-template>
-</amplify-authenticator>
-
+  </amplify-authenticator>
 </nav>

@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* Bootstrap icons */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-/* @import '~@aws-amplify/ui-angular/theme.css'; */
+/* @import "~@aws-amplify/ui-angular/theme.css"; */
 
 /* GLOBAL STYLING */
 * {
@@ -14,4 +14,96 @@
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+/* Sign in page */
+amplify-authenticator amplify-sign-in {
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61846202-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=34c6125f226eed54d58cacf6e2ea1c97);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* amplify-sign-in div {
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center; 
+  
+} */
+/* Username */
+amplify-text-field label {
+  padding-right: 10px;
+}
+.amplify-input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid lightgray;
+}
+/* Password */
+amplify-password-field {
+  display: flex;
+}
+
+amplify-password-field label {
+  padding-right: 15px;
+}
+
+.amplify-visually-hidden {
+  font-weight: bold;
+  color: #152d7c;
+}
+amplify-sign-in fieldset {
+  height: 400px;
+
+  display: flex;
+  justify-content: space-around;
+}
+amplify-form-field {
+  margin-bottom: -50px;
+}
+/* amplify-form-field[ng-reflect-name="password"] {
+  display: flex;
+  background-color: red;
+  width: 500px;
+} */
+.amplify-button {
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.amplify-icon {
+  width: 14px;
+  height: 14px;
+}
+.amplify-field-group__outer-end button {
+  background: none;
+}
+.amplify-field-group {
+  display: flex;
+  position: relative;
+}
+.amplify-field-group__outer-end {
+  position: absolute;
+  background-color: none;
+  right: 0;
+  top: -13px;
+}
+
+amplify-sign-in form {
+  border-radius: 10px;
+  background-color: white;
+  min-height: 60vh;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

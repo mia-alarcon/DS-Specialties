@@ -1,4 +1,4 @@
-@import '~@aws-amplify/ui-angular/theme.css';
+@import "~@aws-amplify/ui-angular/theme.css";
 
 .toolbar {
   background-color: #93c1fe;
@@ -8,11 +8,10 @@
   background-color: #152d7c;
 }
 .main-container {
-  height: 100%;
+  min-height: 100vh;
   background-color: #f5fafd;
 }
 .test {
   /* min-height: 80vh; */
   background-color: #f5fafd;
 }
-

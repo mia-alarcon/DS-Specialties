@@ -18,12 +18,14 @@ import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { APIService } from './API.service';
+import { TimesheetService } from './timesheet.service';
 import { TimestampComponent } from './timestamp/timestamp.component';
 import { UpdateEmployeeComponent } from './profiles/update-employee/update-employee.component';
 import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-employee.component';
 import { LoginComponent } from './form/login/login.component';
 import { FormComponent } from './form/form.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
+import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { DailyViewComponent } from './timesheet/daily-view/daily-view.component'
     DeleteEmployeeComponent,
     LoginComponent,
     FormComponent,
-    DailyViewComponent
+    DailyViewComponent,
+    WeeklyViewComponent
     
     
   ],
@@ -53,7 +56,7 @@ import { DailyViewComponent } from './timesheet/daily-view/daily-view.component'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [APIService],
+  providers: [APIService, TimesheetService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -7,10 +7,16 @@
   background-color: white;
 }
 
-.company h1 {
+.company {
+  font-weight: bold;
   color: #152d7c;
 }
 
+.tagline {
+  color: #80b5fcff;
+  line-height: 10px;
+  font-size: 1.2rem;
+}
 .user {
   color: #152d7c;
   display: flex;

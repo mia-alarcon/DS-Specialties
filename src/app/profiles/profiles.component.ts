@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService, Employee } from 'src/app/API.service';
 import { SelectedEmployeeService } from '../selected-employee.service';
-import { Subscription } from 'rxjs';
+import { filter, Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
