@@ -1,12 +1,12 @@
 <div class="toolbar">
 
-  <div *ngIf="hasRoute('timesheet/daily-view')">
+  <div class="datepicker" *ngIf="hasRoute('timesheet/daily-view')">
     <button class="fw-bold" routerLink="timesheet/weekly-view">Daily View</button>
-    <span><input type="date" (change)="SendDataonChange($event)"
+    <span><input type="date" class="form-control" (change)="SendDataonChange($event)"
         autocomplete="off" /><input type="submit" (click)="setDate()"/></span>
   </div>
 
-  <div *ngIf="hasRoute('timesheet/weekly-view')">
+  <div class="datepicker" *ngIf="hasRoute('timesheet/weekly-view')">
     <button class="fw-bold" routerLink="timesheet/daily-view">Weekly View</button>
     <span><input type="date" (change)="SendDataonChange($event)"
         autocomplete="off" /><input type="submit" (click)="setDate()"/></span>

@@ -59,23 +59,23 @@ export class WeeklyViewComponent implements OnInit {
     },
     { 
       name: 'Jacob Thorton', 
-      hoursSun: 0,
-      hoursMon: 0,
-      hoursTue: 0, 
-      hoursWed: 0,
-      hoursThu: 0,
-      hoursFri: 0, 
-      hoursSat: 0
+      hrSun: 0,
+      hrMon: 0,
+      hrTue: 0, 
+      hrWed: 0,
+      hrThu: 0,
+      hrFri: 0, 
+      hrSat: 0
     },
     { 
       name: 'Jennifer Brown', 
-      hoursSun: 0,
-      hoursMon: 0,
-      hoursTue: 0, 
-      hoursWed: 0,
-      hoursThu: 0,
-      hoursFri: 0, 
-      hoursSat: 0
+      hrSun: 0,
+      hrMon: 0,
+      hrTue: 0, 
+      hrWed: 0,
+      hrThu: 0,
+      hrFri: 0, 
+      hrSat: 0
     },
   ];
 

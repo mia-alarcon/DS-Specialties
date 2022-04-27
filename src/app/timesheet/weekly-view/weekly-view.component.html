@@ -2,7 +2,7 @@
     <thead>
         <tr>
         <!-- To Do: make columns iterate over days in week-->
-        <th scope="col">Name</th>
+        <th scope="col">Name </th>
         <th *ngFor="let day of daysOfWeek">{{ day.title }}, {{ day.date }}</th>
         <th scope="col">Total</th>
         </tr>
@@ -10,13 +10,13 @@
     <tbody>
         <tr *ngFor="let employee of employees">
           <th scope="row">{{ employee.name }}</th>
-          <td>{{ employee.hoursSun }}</td>
-          <td>{{ employee.hoursMon }}</td>
-          <td>{{ employee.hoursTue }}</td>
-          <td>{{ employee.hoursWed }}</td>
-          <td>{{ employee.hoursThu }}</td>
-          <td>{{ employee.hoursFri }}</td>
-          <td>{{ employee.hoursSat }}</td>
+          <td>{{ employee.hrSun }}</td>
+          <td>{{ employee.hrMon }}</td>
+          <td>{{ employee.hrTue }}</td>
+          <td>{{ employee.hrWed }}</td>
+          <td>{{ employee.hrThu }}</td>
+          <td>{{ employee.hrFri }}</td>
+          <td>{{ employee.hrSat }}</td>
           <td>0</td>
         </tr>
     </tbody>

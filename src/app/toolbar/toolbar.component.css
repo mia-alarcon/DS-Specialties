@@ -51,8 +51,29 @@ i {
   margin-right: 10px;
 }
 
-input[type=date] {
+.datepicker {
+  margin-right: 10px;
+}
 
+input[type=date] {
+  background-color:white;
+  border: none;
+  margin-right: 20px;
+}
+
+input[type=submit] {
+  background-color: inherit;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #80b5fcff;
+  padding: 20px 0px;
 }
 /* button {
   background-color: inherit;
