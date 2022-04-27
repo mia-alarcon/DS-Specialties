@@ -4,7 +4,6 @@ query GetTimesheet($id: ID!) {
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date
@@ -30,7 +29,6 @@ query ListTimesheets(
       id
       employeeID
       firstName
-      lastName
       clockIn
       clockOut
       date

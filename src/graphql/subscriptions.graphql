@@ -4,7 +4,6 @@ subscription OnCreateTimesheet {
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date
@@ -17,7 +16,6 @@ subscription OnUpdateTimesheet {
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date
@@ -30,7 +28,6 @@ subscription OnDeleteTimesheet {
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date

@@ -7,7 +7,6 @@ mutation CreateTimesheet(
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date
@@ -23,7 +22,6 @@ mutation UpdateTimesheet(
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date
@@ -39,7 +37,6 @@ mutation DeleteTimesheet(
     id
     employeeID
     firstName
-    lastName
     clockIn
     clockOut
     date
