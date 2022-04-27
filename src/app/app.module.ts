@@ -27,6 +27,7 @@ import { FormComponent } from './form/form.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
 import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.component';
 import { PayrollEmployeeComponent } from './payroll/payroll-employee/payroll-employee.component';
+import { PayrollEmployee2Component } from './payroll/payroll-employee/payroll-employee2/payroll-employee2.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { PayrollEmployeeComponent } from './payroll/payroll-employee/payroll-emp
     DailyViewComponent,
     WeeklyViewComponent,
     PayrollEmployeeComponent,
+    PayrollEmployee2Component,
     
     
   ],
