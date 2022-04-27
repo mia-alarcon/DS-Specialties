@@ -59,6 +59,13 @@
     </button>
   </div>
 
+  <div *ngIf="hasRoute('update-employee')" class="toolbarTitle two-items">
+    <h2>Employee Profiles View</h2>
+    <button routerLink="profiles" id="profiles">
+      <i class="bi bi-arrow-return-left"></i>Return to Profiles
+    </button>
+  </div>
+
   <div *ngIf="hasRoute('qr-scan')" class="toolbarTitle" style="  justify-content: center;">
     <h2>QR Clock-In Form</h2>
   </div>
