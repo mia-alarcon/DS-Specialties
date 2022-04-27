@@ -10,22 +10,44 @@
     /></span>
   </div>
 
+  <!-- First Payroll Page-->
+
   <div *ngIf="hasRoute('payroll')" class="single">
     <span>
         Employee ID
     <input
-        type="String"
+        type="text"
     />
-    <!--
-        (change)="SendDataonChange($event)" 
-        autocomplete="off" /><input type="submit" (click)="setEmployeeID()"
-      -->
+
     </span>
-    <button routerLink="payroll-employee" id="payroll-employee">
+    <button routerLink="employee" id="payroll-employee">
       Submit
     </button>
     <span class="fw-bold payroll">Payroll View</span>
   </div>
+
+  <!-- Second Payroll Page-->
+
+  <div *ngIf="hasRoute('employee')" class="single">
+    <span>
+        Employee ID
+    <input
+        type="text"
+    />
+
+    </span>
+    <button routerLink="employee2" id="payroll-employee2">
+      Submit
+    </button>
+    <span class="fw-bold payroll">Payroll View</span>
+  </div>
+
+  <!-- Third Payroll Page-->
+
+  <div *ngIf="hasRoute('employee2')" class="single">
+    <span class="fw-bold payroll">Payroll View</span>
+  </div>
+
 
   <div *ngIf="hasRoute('profiles')">
     <button routerLink="add-employee" id="add-employee">

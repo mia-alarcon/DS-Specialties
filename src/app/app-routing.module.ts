@@ -9,6 +9,7 @@ import { UpdateEmployeeComponent } from './profiles/update-employee/update-emplo
 import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-employee.component';
 import { SubmissionComponent } from './form/submission/submission.component';
 import { PayrollEmployeeComponent } from './payroll/payroll-employee/payroll-employee.component';
+import { PayrollEmployee2Component } from './payroll/payroll-employee/payroll-employee2/payroll-employee2.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'form/submission', component: FormComponent},
   { path: '', component: FormComponent },
   { path: 'timesheet/daily-view', component: DailyViewComponent },
-  { path: 'payroll-employee', component: PayrollEmployeeComponent}
+  { path: 'employee', component: PayrollEmployeeComponent},
+  { path: 'employee2', component: PayrollEmployee2Component}
 
 ];
 
