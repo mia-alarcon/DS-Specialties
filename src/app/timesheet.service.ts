@@ -1,5 +1,5 @@
 import { animate } from '@angular/animations';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { Subject } from 'rxjs';
 
@@ -9,8 +9,14 @@ import { Subject } from 'rxjs';
 
 
 export class TimesheetService {
+  
+  @Output() aClickedEvent = new EventEmitter<string>();
+  
+  AClicked(msg: string) {
+    this.aClickedEvent.emit(msg);
+  }
+  
   selectedDate: string;
-
 
   constructor() { }
 }

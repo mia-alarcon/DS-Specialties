@@ -9,12 +9,20 @@
         <th scope="col">Total</th>
         </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let timesheet of timesheets">
-          <th scope="row">{{ timesheet.employeeID }}</th>
-          <td>{{ timesheet.firstName }}</td>
-          <td>{{ timesheet.clockIn }}</td>
-          <td>{{ timesheet.clockOut }}</td>
+    <tbody *ngIf="isToday">
+        <tr *ngFor="let employee of employees">
+          <th scope="row">{{ employee.employeeID }}</th>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.clockIn }}</td>
+          <td>{{ employee.clockOut }}</td>
+          <td>{{ employee.total }}</td>
         </tr>
       </tbody>
 </table>
+
+<!-- <tr *ngFor="let timesheet of timesheets">
+  <th scope="row">{{ timesheet.employeeID }}</th>
+  <td>{{ timesheet.firstName }}</td>
+  <td>{{ timesheet.clockIn }}</td>
+  <td>{{ timesheet.clockOut }}</td>
+</tr> -->

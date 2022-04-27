@@ -1,14 +1,20 @@
 <div class="toolbar">
-  <div *ngIf="hasRoute('timesheet')" class="toolbarTitle">
-    <h2 class="payroll-view">Employee ID</h2>
-    <button id="view-title">Weekly View</button>
-
+  
+  <div *ngIf="hasRoute('timesheet/weekly-view')" class="toolbarTitle">
+    <button id="view-title" routerLink="timesheet/daily-view">Switch to Daily</button>
+    <h2 class="payroll-view">Weekly View</h2>
     <span class="timesheet-date employeeNum">
-      <input
-        type="date"
-        (change)="SendDataonChange($event)"
-        autocomplete="off"
-      /><button (click)="setDate()">Submit</button>
+      <input type="date" (change)="SendDataonChange($event)" autocomplete="off"/>
+      <button (click)="setDate()">Submit</button>
+    </span>
+  </div>
+
+  <div *ngIf="hasRoute('timesheet/daily-view')" class="toolbarTitle">
+    <button id="view-title" routerLink="timesheet/weekly-view">Switch to Weekly</button>
+    <h2 class="payroll-view">Daily View</h2>
+        <span class="timesheet-date employeeNum">
+      <input type="date" (change)="SendDataonChange($event)" autocomplete="off"/>
+      <button (click)="setDate()">Submit</button>
     </span>
   </div>
 

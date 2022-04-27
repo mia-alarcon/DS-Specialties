@@ -1,1 +1,28 @@
-<p>weekly-view works!</p>
+<table class="table">
+    <thead>
+        <tr *ngIf="isToday">
+        <th scope="col">Name</th>
+        <th *ngFor="let day of daysOfWeek">{{ day.title }}, {{ day.date }}</th>
+        <th scope="col">Total</th>
+        </tr>
+
+        <tr *ngIf="!isToday">
+            <th scope="col">Name</th>
+            <th *ngFor="let day of notThisWeek">{{ day.title }} {{ day.date }}</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="isToday">
+        <tr *ngFor="let employee of employees">
+          <th scope="row">{{ employee.name }}</th>
+          <td>{{ employee.hrSun }}</td>
+          <td>{{ employee.hrMon }}</td>
+          <td>{{ employee.hrTue }}</td>
+          <td>{{ employee.hrWed }}</td>
+          <td>{{ employee.hrThu }}</td>
+          <td>{{ employee.hrFri }}</td>
+          <td>{{ employee.hrSat }}</td>
+          <td>{{ employee.total }}</td>
+        </tr>
+    </tbody>
+</table>

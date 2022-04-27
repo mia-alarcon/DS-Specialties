@@ -27,13 +27,14 @@ export class ToolbarComponent implements OnInit {
 
   SendDataonChange(event: any){
     this.date = event.target.value;
-    console.log(this.date);
   }
 
   setDate(){
     this.timesheet.selectedDate = this.date;
     this.testDate = this.date;
     console.log(this.testDate);
+    this.timesheet.AClicked('Component A is clicked!');
+    
   }
 
   setEmployeeID(){

@@ -16,11 +16,11 @@ export class DailyViewComponent implements OnInit {
 
   title = 'amplify-angular-app';
 
-  public timesheets: Array<Timesheet> = [];
-
-  myDate: string;
-
   constructor(private api: APIService, private datePipe: DatePipe, private timesheet: TimesheetService) { }
+
+  public timesheets: Array<Timesheet> = [];
+  myDate: string;
+  isToday: boolean;
 
   async ngOnInit() {
     // fetches timesheet data when the app loads
@@ -31,13 +31,37 @@ export class DailyViewComponent implements OnInit {
       this.timesheets = this.timesheets.filter(timesheet => timesheet.date == this.myDate);
       console.log(this.timesheets); 
     });
-    
+
+    this.timesheet.aClickedEvent.subscribe((data:string) => {
+      console.log('Event message: ' + data);
+
+      if (this.myDate == '2022-04-27') {
+        this.isToday = true;
+      }
+    })
+
     this.myDate = this.datePipe.transform(Date(), 'yyyy-MM-dd');
-    console.log(this.myDate);
 
     this.timesheet.selectedDate = this.myDate;
 
-    console.log(this.timesheet.selectedDate);
+    
   };
+
+  public employees: Array<any> = [
+    { 
+      name: 'Mark Otto', 
+      employeeID: '101',
+      clockIn: '09:00',
+      clockOut: '05:00', 
+      total: 8
+    },
+    { 
+      name: 'Erin Hansen', 
+      employeeID: '103',
+      clockIn: '12:00',
+      clockOut: '15:30', 
+      total: 3.5
+    },
+  ];
 
 }

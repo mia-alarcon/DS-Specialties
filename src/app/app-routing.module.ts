@@ -10,11 +10,10 @@ import { DeleteEmployeeComponent } from './profiles/delete-employee/delete-emplo
 import { SubmissionComponent } from './form/submission/submission.component';
 import { PayrollEmployeeComponent } from './payroll/payroll-employee/payroll-employee.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
-
+import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.component';
 const routes: Routes = [
   { path: 'payroll', component: PayrollComponent },
   { path: 'profiles', component: ProfilesComponent },
-  { path: 'timesheet', component: TimesheetComponent },
   { path: 'add-employee', component: AddEmployeeComponent },
   { path: 'profiles/update-employee', component: UpdateEmployeeComponent },
   { path: 'delete-employee', component: DeleteEmployeeComponent },
@@ -23,8 +22,8 @@ const routes: Routes = [
   { path: 'update-employee/:employeeID', component: UpdateEmployeeComponent },
   { path: 'profiles/update-employee', component: UpdateEmployeeComponent},
   { path: 'form/submission', component: FormComponent},
-  { path: '', component: FormComponent },
   { path: 'timesheet/daily-view', component: DailyViewComponent },
+  { path: 'timesheet/weekly-view', component: WeeklyViewComponent },
   { path: 'payroll-employee', component: PayrollEmployeeComponent}
 
 ];
