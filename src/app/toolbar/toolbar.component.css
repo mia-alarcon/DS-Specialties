@@ -1,85 +1,62 @@
-div {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-div button {
-  margin: 0 25px;
-}
-
-div span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-
-.toolbar {
+.toolbarTitle {
   min-height: 10vh;
-  font-size: 20px;
-}
-.single {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.two-items {
-  width: 55%;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
 }
-#date-selector {
-  background-color: #80b5fcff;
-  padding: 10px;
+h2 {
+  font-weight: bold;
+  font-size: 22px;
 }
-
+h4 {
+  font-weight: 600;
+  font-size: 15px;
+}
 button {
-  background-color: inherit;
+  background-color: rgb(91, 154, 237);
   border: none;
-  border-radius: 50px;
-
+  height: 30px;
+  padding: 0 12px;
   color: white;
   cursor: pointer;
   font-size: 15px;
 }
-
 button:hover {
-  background-color: #80b5fcff;
+  background-color: #2449c3;
 }
-
-i {
-  margin-right: 10px;
-}
-/* button {
-  background-color: inherit;
-  color: inherit;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  outline: none;
-}
-
-.container {
-  display: inline;
-  min-height: 10vh;
-  font-size: 20px;
-}
-
-
-
-.payroll {
+/** Payroll styling **/
+.employeeNum {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.employeeNum input {
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-size: 15px;
+  height: 30px;
+  padding: 12px;
+}
+.employeeNum button {
+  background-color: rgb(91, 154, 237);
+  border: none;
+  height: 30px;
+  padding: 0 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.employeeNum button:hover {
+  background-color: #2449c3;
 }
 
-#date-selector {
-  background-color: #80b5fcff;
-  padding: 10px;
+/** Profiles **/
+#add-employee i,
+#delete-employee i,
+#profiles i {
+  margin-right: 5px;
 }
-
-.profiles {
-  display: inline;
-  padding: 30px;
-}
-
-#add-employee:hover {
-  background-color: rgb(126, 175, 239);
-} */

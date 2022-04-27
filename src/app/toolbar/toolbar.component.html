@@ -1,53 +1,53 @@
 <div class="toolbar">
-  <div *ngIf="hasRoute('timesheet')">
+  <div *ngIf="hasRoute('timesheet')" class="toolbarTitle">
+    <h2 class="payroll-view">Employee ID</h2>
     <button id="view-title">Weekly View</button>
-    <span
-      >Tuesday, 4/12/2022
+
+    <span class="timesheet-date employeeNum">
       <input
         type="date"
         (change)="SendDataonChange($event)"
-        autocomplete="off" /><input type="submit" (click)="setDate()"
-    /></span>
+        autocomplete="off"
+      /><button (click)="setDate()">Submit</button>
+    </span>
   </div>
 
-  <div *ngIf="hasRoute('payroll')" class="single">
-    <span>
-        Employee ID
-    <input
-        type="String"
-    />
+  <div *ngIf="hasRoute('payroll')" class="two-items toolbarTitle">
+    <h2 class="payroll">Payroll View</h2>
+    <div class="employeeNum">
+      <input type="text" placeholder="Enter employee number" />
+      <button routerLink="payroll-employee" id="payroll-employee">
+        Submit
+      </button>
+    </div>
     <!--
         (change)="SendDataonChange($event)" 
         autocomplete="off" /><input type="submit" (click)="setEmployeeID()"
       -->
-    </span>
-    <button routerLink="payroll-employee" id="payroll-employee">
-      Submit
-    </button>
-    <span class="fw-bold payroll">Payroll View</span>
   </div>
 
-  <div *ngIf="hasRoute('profiles')">
+  <div *ngIf="hasRoute('profiles')" class="toolbarTitle">
     <button routerLink="add-employee" id="add-employee">
       <i class="bi bi-plus"></i>Add Employee
     </button>
-    <span class="fw-bold">Employee Profiles View</span>
+    <h2 class="fw-bold">Employee Profiles View</h2>
+
     <button routerLink="delete-employee" id="delete-employee">
       <i class="bi bi-trash3"></i>Delete Employee
     </button>
   </div>
 
-  <div *ngIf="hasRoute('add-employee')" class="two-items">
+  <div *ngIf="hasRoute('add-employee')" class="toolbarTitle two-items">
+    <h2>Add Employee Form</h2>
     <button routerLink="profiles" id="profiles">
       <i class="bi bi-arrow-return-left"></i>Return to Profiles
     </button>
-    <span>Add Employee Form</span>
   </div>
 
-  <div *ngIf="hasRoute('delete-employee')" class="two-items">
+  <div *ngIf="hasRoute('delete-employee')" class="toolbarTitle two-items">
+    <h2>Delete Employee</h2>
     <button routerLink="profiles" id="profiles">
       <i class="bi bi-arrow-return-left"></i>Return to Profiles
     </button>
-    <span>Delete Employee</span>
   </div>
 </div>
