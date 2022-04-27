@@ -14,6 +14,11 @@
     <h2>PROFILES</h2>
   </button>
 
+  <button routerLink="qr-scan">
+    <i class="bi bi-qr-code"></i>
+    <h2>QR SCAN</h2>
+  </button>
+
   <amplify-authenticator>
     <ng-template amplifySlot="authenticated" let-signOut="signOut">
       <button (click)="signOut()">

@@ -11,6 +11,8 @@ import { SubmissionComponent } from './form/submission/submission.component';
 import { PayrollEmployeeComponent } from './payroll/payroll-employee/payroll-employee.component';
 import { DailyViewComponent } from './timesheet/daily-view/daily-view.component';
 import { WeeklyViewComponent } from './timesheet/weekly-view/weekly-view.component';
+import { QrScanComponent } from './qr-scan/qr-scan.component';
+
 const routes: Routes = [
   { path: 'payroll', component: PayrollComponent },
   { path: 'profiles', component: ProfilesComponent },
@@ -24,7 +26,8 @@ const routes: Routes = [
   { path: 'form/submission', component: FormComponent},
   { path: 'timesheet/daily-view', component: DailyViewComponent },
   { path: 'timesheet/weekly-view', component: WeeklyViewComponent },
-  { path: 'payroll-employee', component: PayrollEmployeeComponent}
+  { path: 'payroll-employee', component: PayrollEmployeeComponent},
+  { path: 'qr-scan', component: QrScanComponent}
 
 ];
 
