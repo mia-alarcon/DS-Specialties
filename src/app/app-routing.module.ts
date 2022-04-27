@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'delete-employee/:employeeID', component: DeleteEmployeeComponent },
   { path: 'update-employee/:employeeID', component: UpdateEmployeeComponent },
   { path: 'profiles/update-employee', component: UpdateEmployeeComponent},
-  { path: 'form/submission', component: FormComponent},
+  { path: '', component: PayrollComponent},
   { path: 'timesheet/daily-view', component: DailyViewComponent },
   { path: 'timesheet/weekly-view', component: WeeklyViewComponent },
   { path: 'payroll-employee', component: PayrollEmployeeComponent},
