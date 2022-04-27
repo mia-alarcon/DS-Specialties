@@ -49,6 +49,10 @@ export class TimesheetComponent implements OnInit {
     });
   }
 
+  hasRoute(route: string) {
+    return this.router.url.includes(route);
+  }
+
 }
 
 export interface IEmployee {
