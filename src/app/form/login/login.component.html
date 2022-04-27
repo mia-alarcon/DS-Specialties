@@ -8,7 +8,13 @@
       (ngSubmit)="onCreate(createForm.value)" 
     >
     <label id="icon" for="name"><i class="fas fa-user"></i></label>
-    <input type="text" formControlName="firstName" name="name" id="name" placeholder="Select Name" required/>
+    <!-- <input type="text" formControlName="firstName" name="name" id="name" placeholder="Select Name" required/> -->
+    <select name="name" formControlName="firstName" required>
+        <option style="color: #b6bdd1;" value="" disabled selected hidden>Select Employee</option>
+        <option value="101">Mark Otto</option>
+        <option value="102">Nicole Pham</option>
+        <option value="103">Erin Hansen</option>
+    </select>
     <label id="icon" for="name"><i class="fas fa-key"></i></label>
     <input type="password" formControlName="employeeID"  name="name" id="name" placeholder="Employee ID" required/>
     <div class="clock">

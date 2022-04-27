@@ -111,6 +111,14 @@ html, body {
     ::placeholder {
         color: #b6bdd1;
     }
+
+    select:required:invalid {
+        color: #b6bdd1;;
+      }
+
+    option {
+        color: black;
+    }
     input[type=radio]:checked + label:after {
     opacity: 1;
     }
@@ -126,6 +134,17 @@ html, body {
     }
     input[type=password] {
     margin-bottom: 15px;
+    }
+
+    select {
+    width: calc(100% - 57px);
+    height: 36px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px; 
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.04); 
+    background: #fff; 
     }
     #icon {
     display: inline-block;
