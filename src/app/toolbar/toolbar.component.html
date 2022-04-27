@@ -1,17 +1,4 @@
 <div class="toolbar">
-<<<<<<< HEAD
-  <div *ngIf="hasRoute('timesheet')" class="toolbarTitle">
-    <h2 class="payroll-view">Employee ID</h2>
-    <button id="view-title">Weekly View</button>
-
-    <span class="timesheet-date employeeNum">
-      <input
-        type="date"
-        (change)="SendDataonChange($event)"
-        autocomplete="off"
-      /><button (click)="setDate()">Submit</button>
-    </span>
-=======
 
   <div class="datepicker" *ngIf="hasRoute('timesheet/daily-view')">
     <button class="fw-bold" routerLink="timesheet/weekly-view">Daily View</button>
@@ -23,7 +10,6 @@
     <button class="fw-bold" routerLink="timesheet/daily-view">Weekly View</button>
     <span><input type="date" (change)="SendDataonChange($event)"
         autocomplete="off" /><input type="submit" (click)="setDate()"/></span>
->>>>>>> victoria-weekly
   </div>
 
   <div *ngIf="hasRoute('payroll')" class="two-items toolbarTitle">
