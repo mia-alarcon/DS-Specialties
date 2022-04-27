@@ -60,3 +60,12 @@ button:hover {
 #profiles i {
   margin-right: 5px;
 }
+.fake button:hover {
+  background-color: #93c1fe;
+  color: #93c1fe;
+}
+.fake {
+  background-color: inherit;
+  color: #93c1fe;
+}
+
